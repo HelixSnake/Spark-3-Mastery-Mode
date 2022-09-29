@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using MelonLoader;
 
-[HarmonyPatch(typeof(WorldMapCursor))]
-[HarmonyPatch("MakeStageDetailsList")]
-class ShowStageID
+[HarmonyPatch(typeof(PauseMenuMedalTargets))]
+[HarmonyPatch("Start")]
+class ShowStageIndex
 {
     private static void Prefix()
     {
     }
-    private static void Postfix(WorldMapCursor __instance)
+    private static void Postfix(PauseMenuMedalTargets __instance)
     {
-        foreach (StageData data in WorldMapCursor.StageDetailsList)
-        {
-            data.StageName += " [" + data.ID + "]";
-        }
+        __instance.SpeedObject.SetActive(true);
+
+        __instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
     }
 }

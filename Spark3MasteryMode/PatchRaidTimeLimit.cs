@@ -12,9 +12,9 @@ class PatchRaidTimeLimit
     private static void Prefix(Raid __instance)
     {
         __instance.LevelEndTime = 300f;
-        __instance.MinScoreGoal = 300000f;
-        __instance.GoldScoreGoal = 600000f;
-        __instance.DiaScoreGoal = 800000f;
+        __instance.MinScoreGoal = 100000f;
+        __instance.GoldScoreGoal = 700000f;
+        __instance.DiaScoreGoal = 1000000f;
     }
     private static void Postfix()
     {
