@@ -9,14 +9,19 @@ using HarmonyLib;
 [HarmonyPatch("ManageParry")]
 class MakeChallengeParry
 {
-    private static void Prefix(out DificultyLevel __state)
+    private static void Prefix()
     {
-        __state = Dificulty.Level;
-        Dificulty.Level = DificultyLevel.Challange;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Challange;
+        }
     }
-    private static void Postfix(DificultyLevel __state)
+    private static void Postfix()
     {
-        Dificulty.Level = __state;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Hard;
+        }
     }
 }
 
@@ -24,14 +29,19 @@ class MakeChallengeParry
 [HarmonyPatch("FixedUpdate")]
 class MakeChallengeBlock1
 {
-    private static void Prefix(out DificultyLevel __state)
+    private static void Prefix()
     {
-        __state = Dificulty.Level;
-        Dificulty.Level = DificultyLevel.Challange;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Challange;
+        }
     }
-    private static void Postfix(DificultyLevel __state)
+    private static void Postfix()
     {
-        Dificulty.Level = __state;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Hard;
+        }
     }
 }
 
@@ -39,13 +49,18 @@ class MakeChallengeBlock1
 [HarmonyPatch("OnEnable")]
 class MakeChallengeBlock2
 {
-    private static void Prefix(out DificultyLevel __state)
+    private static void Prefix()
     {
-        __state = Dificulty.Level;
-        Dificulty.Level = DificultyLevel.Challange;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Challange;
+        }
     }
-    private static void Postfix(DificultyLevel __state)
+    private static void Postfix()
     {
-        Dificulty.Level = __state;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Dificulty.Level = DificultyLevel.Hard;
+        }
     }
 }

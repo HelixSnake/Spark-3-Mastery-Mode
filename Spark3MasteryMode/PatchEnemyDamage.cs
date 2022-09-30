@@ -7,11 +7,23 @@ class PatchEnemyDamage
 {
     private static void Prefix(HitBoxInfo h)
     {
-        h.Damage *= 0.35f;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            if (Save.CurrentStageIndex == 38)
+                h.Damage *= 0.5f;
+            else
+                h.Damage *= 0.35f;
+        }
     }
     private static void Postfix(HitBoxInfo h)
     {
-        h.Damage /= 0.35f;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            if (Save.CurrentStageIndex == 38)
+                h.Damage /= 0.5f;
+            else
+                h.Damage /= 0.35f;
+        }
     }
 }
 
@@ -21,11 +33,14 @@ class PatchEnemyParryDamage
 {
     private static void Postfix(RadsamuEnemy __instance)
     {
-        __instance.ArmourDamageOnParry *= 0.35f;
-        __instance.LeaderAttackInterval *= 0.4f;
-        __instance.LeaderAttackRecoveryTime *= 0.4f;
-        __instance.BackgroundAttackInterval *= 0.4f;
-        __instance.BackgroundAttackRecoveryTime *= 0.4f;
-        __instance.DontAttackIfAnotherAttackHasStarted = false;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            __instance.ArmourDamageOnParry *= 0.35f;
+            __instance.LeaderAttackInterval *= 0.5f;
+            __instance.LeaderAttackRecoveryTime *= 0.5f;
+            __instance.BackgroundAttackInterval *= 0.5f;
+            __instance.BackgroundAttackRecoveryTime *= 0.5f;
+            __instance.DontAttackIfAnotherAttackHasStarted = false;
+        }
     }
 }

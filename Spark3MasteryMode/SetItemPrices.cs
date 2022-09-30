@@ -11,30 +11,46 @@ class SetItemPrices
 {
     private static void Prefix(ShopaloShop __instance)
     {
-        foreach (var item in __instance.MainPageItens)
+        if (MasteryMod.DifficultyIsMastery())
         {
-            item.BitsCost = 1;
-        }
-        foreach (var item in __instance.JesterItens)
-        {
-            item.BitsCost = 1;
-            item.gameObject.SetActive(true);
-        }
-        for (int i = 0; i < __instance.SpecialItens.Length; i++)
-        {
-            if (i == 0 || i == 2 || i == 3)
-                __instance.SpecialItens[i].BitsCost = int.MaxValue;
-            else
-                __instance.SpecialItens[i].BitsCost = 1;
+            foreach (var item in __instance.MainPageItens)
+            {
+                item.BitsCost = 1;
+            }
+            foreach (var item in __instance.JesterItens)
+            {
+                item.BitsCost = 1;
+            }
+            for (int i = 0; i < __instance.SpecialItens.Length; i++)
+            {
+                if (i == 0 || i == 2 || i == 3)
+                    __instance.SpecialItens[i].BitsCost = int.MaxValue;
+                else
+                    __instance.SpecialItens[i].BitsCost = 1;
 
+            }
+            foreach (var item in __instance.MoveItens)
+            {
+                item.BitsCost = 1;
+            }
+            foreach (var item in __instance.UpgradeItens)
+            {
+                item.BitsCost = 1;
+            }
         }
-        foreach (var item in __instance.MoveItens)
+    }
+}
+
+[HarmonyPatch(typeof(ShopItenDetails))]
+[HarmonyPatch("CheckUnlocks")]
+class SetItemsUnlocked
+{
+    private static bool Prefix()
+    {
+        if (MasteryMod.DifficultyIsMastery())
         {
-            item.BitsCost = 1;
+            return false;
         }
-        foreach (var item in __instance.UpgradeItens)
-        {
-            item.BitsCost = 1;
-        }
+        return true;
     }
 }

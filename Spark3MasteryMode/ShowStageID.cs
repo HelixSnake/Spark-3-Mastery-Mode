@@ -15,8 +15,13 @@ class ShowStageIndex
     }
     private static void Postfix(PauseMenuMedalTargets __instance)
     {
-        __instance.SpeedObject.SetActive(true);
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            // for debugging
+            //__instance.SpeedObject.SetActive(true);
 
-        __instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
+            //__instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
+
+        }
     }
 }

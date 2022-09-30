@@ -17,7 +17,10 @@ class PatchScoreTimeLimit
     }
     private static void Postfix(ref float ___TimeLimitStatic)
     {
-        ScoreManager.IgnoreLimit = false;
-        ___TimeLimitStatic = 300f;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            ScoreManager.IgnoreLimit = false;
+            ___TimeLimitStatic = 300f;
+        }
     }
 }

@@ -14,7 +14,10 @@ class SetNewMedalThresholds
     }
     private static void Postfix()
     {
-        Save.ScoreGoldTargets[7] = 600000f;
-        Save.ScoreDiaTargets[7] = 1000000f;
+        if (MasteryMod.DifficultyIsMastery())
+        {
+            Save.ScoreGoldTargets[7] = 600000f;
+            Save.ScoreDiaTargets[7] = 1000000f;
+        }
     }
 }
