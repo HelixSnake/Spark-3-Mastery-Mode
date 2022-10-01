@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using MelonLoader;
 
-[HarmonyPatch(typeof(PauseMenuMedalTargets))]
-[HarmonyPatch("Start")]
-class ShowStageIndex
+namespace Spark3MasteryMode
 {
-    private static void Prefix()
+    [HarmonyPatch(typeof(PauseMenuMedalTargets))]
+    [HarmonyPatch("Start")]
+    class ShowStageIndex
     {
-    }
-    private static void Postfix(PauseMenuMedalTargets __instance)
-    {
-        if (MasteryMod.DifficultyIsMastery())
+        private static void Prefix()
         {
-            // for debugging
-            //__instance.SpeedObject.SetActive(true);
+        }
+        private static void Postfix(PauseMenuMedalTargets __instance)
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                // for debugging
+                //__instance.SpeedObject.SetActive(true);
 
-            //__instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
+                //__instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
 
+            }
         }
     }
 }

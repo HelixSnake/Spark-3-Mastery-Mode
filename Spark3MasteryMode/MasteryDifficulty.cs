@@ -6,77 +6,81 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
 
-[HarmonyPatch(typeof(SaveFileMenu))]
-[HarmonyPatch("Start")]
-class MasteryDifficultySaveFileMenu
+namespace Spark3MasteryMode
 {
-    private static void Prefix(SaveFileMenu __instance)
+    [HarmonyPatch(typeof(SaveFileMenu))]
+    [HarmonyPatch("Start")]
+    class MasteryDifficultySaveFileMenu
     {
-        int numOriginalDifficulties = __instance.CombatDifiNames.Length;
-        string[] newNames = new string[numOriginalDifficulties + 1];
-        string[] newDesc = new string[numOriginalDifficulties + 1];
-        Color[] newCol = new Color[numOriginalDifficulties + 1];
-        int i;
-        for (i = 0; i < numOriginalDifficulties; i++)
+        private static void Prefix(SaveFileMenu __instance)
         {
-            newNames[i] = __instance.CombatDifiNames[i];
-            newDesc[i] = __instance.CombatDifiDescrp[i];
-            newCol[i] = __instance.CombatDifiColor[i];
-        }
-        newNames[i] = "MASTERY MODE";
-        newDesc[i] = "Enemies are tougher and meaner, along with various other changes. Can not change difficulty after starting.";
-        newCol[i] = Color.black;
+            int numOriginalDifficulties = __instance.CombatDifiNames.Length;
+            string[] newNames = new string[numOriginalDifficulties + 1];
+            string[] newDesc = new string[numOriginalDifficulties + 1];
+            Color[] newCol = new Color[numOriginalDifficulties + 1];
+            int i;
+            for (i = 0; i < numOriginalDifficulties; i++)
+            {
+                newNames[i] = __instance.CombatDifiNames[i];
+                newDesc[i] = __instance.CombatDifiDescrp[i];
+                newCol[i] = __instance.CombatDifiColor[i];
+            }
+            newNames[i] = "MASTERY MODE";
+            newDesc[i] = "Enemies are tougher and meaner, along with various other changes. Can not change difficulty after starting.";
+            newCol[i] = Color.black;
 
-        __instance.CombatDifiNames = newNames;
-        __instance.CombatDifiDescrp = newDesc;
-        __instance.CombatDifiColor = newCol;
-    }
-}
-
-[HarmonyPatch(typeof(Dificulty))]
-[HarmonyPatch("Start")]
-class MasteryDifficultySetDifficultyLevels
-{
-    private static void Postfix(Dificulty __instance)
-    {
-        if (MasteryMod.DifficultyIsMastery())
-        {
-            Dificulty.Level = DificultyLevel.Hard;
-            Dificulty.PlatformingLevel = DificultyLevel.Normal;
-            __instance.Set();
+            __instance.CombatDifiNames = newNames;
+            __instance.CombatDifiDescrp = newDesc;
+            __instance.CombatDifiColor = newCol;
         }
     }
-}
-[HarmonyPatch(typeof(Save))]
-[HarmonyPatch("Awake")]
-class AddDifficultyToSave
-{
-    private static void Prefix(Save __instance)
-    {
-        int numOriginalDifficulties = __instance.CombatDificultiesName.Length;
-        string[] newNames = new string[numOriginalDifficulties + 1];
-        int i;
-        for (i = 0; i < numOriginalDifficulties; i++)
-        {
-            newNames[i] = __instance.CombatDificultiesName[i];
-        }
-        newNames[i] = "Mastery Mode";
 
-        __instance.CombatDificultiesName = newNames;
-    }
-}
-
-[HarmonyPatch(typeof(PlayerHealthAndStats))]
-[HarmonyPatch("Awake")]
-class SetMasteryModeHealth
-{
-    private static void Postfix(PlayerHealthAndStats __instance)
+    [HarmonyPatch(typeof(Dificulty))]
+    [HarmonyPatch("Start")]
+    class MasteryDifficultySetDifficultyLevels
     {
-        if (MasteryMod.DifficultyIsMastery())
+        private static void Postfix(Dificulty __instance)
         {
-            __instance.HpOver.sprite = __instance.HardBar;
-            __instance.HpCover.sprite = __instance.HardBar;
-            PlayerHealthAndStats.PlayerMaxHp = 3;
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                Dificulty.Level = DificultyLevel.Hard;
+                Dificulty.PlatformingLevel = DificultyLevel.Normal;
+                __instance.Set();
+            }
         }
     }
+    [HarmonyPatch(typeof(Save))]
+    [HarmonyPatch("Awake")]
+    class AddDifficultyToSave
+    {
+        private static void Prefix(Save __instance)
+        {
+            int numOriginalDifficulties = __instance.CombatDificultiesName.Length;
+            string[] newNames = new string[numOriginalDifficulties + 1];
+            int i;
+            for (i = 0; i < numOriginalDifficulties; i++)
+            {
+                newNames[i] = __instance.CombatDificultiesName[i];
+            }
+            newNames[i] = "Mastery Mode";
+
+            __instance.CombatDificultiesName = newNames;
+        }
+    }
+
+    [HarmonyPatch(typeof(PlayerHealthAndStats))]
+    [HarmonyPatch("Awake")]
+    class SetMasteryModeHealth
+    {
+        private static void Postfix(PlayerHealthAndStats __instance)
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                __instance.HpOver.sprite = __instance.HardBar;
+                __instance.HpCover.sprite = __instance.HardBar;
+                PlayerHealthAndStats.PlayerMaxHp = 3;
+            }
+        }
+    }
+
 }

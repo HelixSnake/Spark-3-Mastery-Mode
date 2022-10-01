@@ -7,20 +7,24 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using MelonLoader;
 
-[HarmonyPatch(typeof(ScoreManager))]
-[HarmonyPatch("Start")]
-class PatchScoreTimeLimit
+namespace Spark3MasteryMode
 {
-    private static void Prefix()
+
+    [HarmonyPatch(typeof(ScoreManager))]
+    [HarmonyPatch("Start")]
+    class PatchScoreTimeLimit
     {
-            
-    }
-    private static void Postfix(ref float ___TimeLimitStatic)
-    {
-        if (MasteryMod.DifficultyIsMastery())
+        private static void Prefix()
         {
-            ScoreManager.IgnoreLimit = false;
-            ___TimeLimitStatic = 300f;
+
+        }
+        private static void Postfix(ref float ___TimeLimitStatic)
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                ScoreManager.IgnoreLimit = false;
+                ___TimeLimitStatic = 300f;
+            }
         }
     }
 }

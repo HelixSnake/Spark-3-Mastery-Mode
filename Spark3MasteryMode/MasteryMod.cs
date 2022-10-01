@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
-public class MasteryMod : MelonMod
+
+namespace Spark3MasteryMode
 {
-    public override void OnApplicationStart()
+    public class MasteryMod : MelonMod
     {
-        base.OnApplicationStart();
-    }
-    public static bool DifficultyIsMastery()
-    {
-        return Save.GetCurrentSave().CombatDificulty == 5;
+        public override void OnApplicationStart()
+        {
+            base.OnApplicationStart();
+        }
+        public static bool DifficultyIsMastery()
+        {
+            return Save.GetCurrentSave().CombatDificulty == 5;
+        }
     }
 }

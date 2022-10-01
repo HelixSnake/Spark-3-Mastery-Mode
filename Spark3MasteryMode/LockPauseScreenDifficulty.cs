@@ -7,23 +7,26 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
 
-[HarmonyPatch(typeof(WorldMapPauseMenu))]
-[HarmonyPatch("Update")]
-class SetDifficultyMinimumPauseMenu
+namespace Spark3MasteryMode
 {
-    private static void Prefix(out bool __state)
+    [HarmonyPatch(typeof(WorldMapPauseMenu))]
+    [HarmonyPatch("Update")]
+    class SetDifficultyMinimumPauseMenu
     {
-        __state = MasteryMod.DifficultyIsMastery();
-    }
-    private static void Postfix(bool __state, WorldMapPauseMenu __instance)
-    {
-        if (__state)
+        private static void Prefix(out bool __state)
         {
-            if (Save.GetCurrentSave().CombatDificulty < 5 || Save.GetCurrentSave().PlatformingDificulty < 2)
+            __state = MasteryMod.DifficultyIsMastery();
+        }
+        private static void Postfix(bool __state, WorldMapPauseMenu __instance)
+        {
+            if (__state)
             {
-                Save.GetCurrentSave().CombatDificulty = 5;
-                Save.GetCurrentSave().PlatformingDificulty = 2;
-                typeof(WorldMapPauseMenu).GetMethod("SetDificultyText", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(__instance, new object[0]);
+                if (Save.GetCurrentSave().CombatDificulty < 5 || Save.GetCurrentSave().PlatformingDificulty < 2)
+                {
+                    Save.GetCurrentSave().CombatDificulty = 5;
+                    Save.GetCurrentSave().PlatformingDificulty = 2;
+                    typeof(WorldMapPauseMenu).GetMethod("SetDificultyText", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(__instance, new object[0]);
+                }
             }
         }
     }

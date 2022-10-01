@@ -2,8 +2,9 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
+using Spark3MasteryMode;
 
-[assembly: MelonInfo(typeof(MasteryMod), "Mastery Mode", "0.1.0", "Helix Snake")]
+[assembly: MelonInfo(typeof(MasteryMod), "Mastery Mode", "0.1.1", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information

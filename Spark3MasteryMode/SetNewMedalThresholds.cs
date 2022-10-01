@@ -4,20 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
-
-[HarmonyPatch(typeof(Save))]
-[HarmonyPatch("Awake")]
-class SetNewMedalThresholds
+namespace Spark3MasteryMode
 {
-    private static void Prefix()
+
+    [HarmonyPatch(typeof(Save))]
+    [HarmonyPatch("Awake")]
+    class SetNewMedalThresholds
     {
-    }
-    private static void Postfix()
-    {
-        if (MasteryMod.DifficultyIsMastery())
+        private static void Prefix()
         {
-            Save.ScoreGoldTargets[7] = 600000f;
-            Save.ScoreDiaTargets[7] = 1000000f;
+        }
+        private static void Postfix()
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                Save.ScoreGoldTargets[7] = 600000f;
+                Save.ScoreDiaTargets[7] = 1000000f;
+            }
         }
     }
 }

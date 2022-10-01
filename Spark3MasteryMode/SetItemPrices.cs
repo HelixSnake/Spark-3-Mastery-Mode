@@ -4,53 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
-
-[HarmonyPatch(typeof(ShopaloShop))]
-[HarmonyPatch("Start")]
-class SetItemPrices
+namespace Spark3MasteryMode
 {
-    private static void Prefix(ShopaloShop __instance)
-    {
-        if (MasteryMod.DifficultyIsMastery())
-        {
-            foreach (var item in __instance.MainPageItens)
-            {
-                item.BitsCost = 1;
-            }
-            foreach (var item in __instance.JesterItens)
-            {
-                item.BitsCost = 1;
-            }
-            for (int i = 0; i < __instance.SpecialItens.Length; i++)
-            {
-                if (i == 0 || i == 2 || i == 3)
-                    __instance.SpecialItens[i].BitsCost = int.MaxValue;
-                else
-                    __instance.SpecialItens[i].BitsCost = 1;
 
-            }
-            foreach (var item in __instance.MoveItens)
+    [HarmonyPatch(typeof(ShopaloShop))]
+    [HarmonyPatch("Start")]
+    class SetItemPrices
+    {
+        private static void Prefix(ShopaloShop __instance)
+        {
+            if (MasteryMod.DifficultyIsMastery())
             {
-                item.BitsCost = 1;
-            }
-            foreach (var item in __instance.UpgradeItens)
-            {
-                item.BitsCost = 1;
+                foreach (var item in __instance.MainPageItens)
+                {
+                    item.BitsCost = 1;
+                }
+                foreach (var item in __instance.JesterItens)
+                {
+                    item.BitsCost = 1;
+                }
+                for (int i = 0; i < __instance.SpecialItens.Length; i++)
+                {
+                    if (i == 0 || i == 2 || i == 3)
+                        __instance.SpecialItens[i].BitsCost = int.MaxValue;
+                    else
+                        __instance.SpecialItens[i].BitsCost = 1;
+
+                }
+                foreach (var item in __instance.MoveItens)
+                {
+                    item.BitsCost = 1;
+                }
+                foreach (var item in __instance.UpgradeItens)
+                {
+                    item.BitsCost = 1;
+                }
             }
         }
     }
-}
 
-[HarmonyPatch(typeof(ShopItenDetails))]
-[HarmonyPatch("CheckUnlocks")]
-class SetItemsUnlocked
-{
-    private static bool Prefix()
+    [HarmonyPatch(typeof(ShopItenDetails))]
+    [HarmonyPatch("CheckUnlocks")]
+    class SetItemsUnlocked
     {
-        if (MasteryMod.DifficultyIsMastery())
+        private static bool Prefix()
         {
-            return false;
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                return false;
+            }
+            return true;
         }
-        return true;
     }
 }
