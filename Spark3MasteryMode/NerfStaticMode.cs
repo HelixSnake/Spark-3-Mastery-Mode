@@ -11,18 +11,13 @@ namespace Spark3MasteryMode
     [HarmonyPatch("StartStaticMode")]
     class NerfStaticMode
     {
-        public static float normalEnergyOnHit = 0;
+        public static float normalEnergyMultiplier = 0;
         static private void Postfix(FarkStaticMode __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
             {
                 PlayerHealthAndStats.Energy -= 50f;
-                if (PlayerHealthAndStats.EnergyOnHit > 0)
-                {
-                    normalEnergyOnHit = PlayerHealthAndStats.EnergyOnHit;
-                    PlayerHealthAndStats.EnergyOnHit = 0;
-                }
-                __instance.EnergyConsumption = 10;
+                Dificulty.EnergyGainMultiplier = 0;
             }
         }
     }
@@ -34,10 +29,7 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                if (NerfStaticMode.normalEnergyOnHit != 0)
-                {
-                    PlayerHealthAndStats.EnergyOnHit = NerfStaticMode.normalEnergyOnHit;
-                }
+                Dificulty.EnergyGainMultiplier = 1;
             } 
         }
     }

@@ -1,0 +1,20 @@
+Release 1.0
+
++ New difficulty added to save file creation - use this difficulty to use the mod. Can only be set on save file creation and can not be changed after.
++ all shop items are unlocked by default and 1 bit, except for super dash, speed up and damage up extra powers, which you can't buy
++ enemies are more aggressive
++ enemies take less damage to both health and armor
++ parries do less armor damage
++ 5 minute score lock timer enabled
++ raid time limit set to 5 minutes
++ raid level has new medal targets
++ Hardcore health levels (4 HP)
++ Challenge jester parry cooldown
+
+Release 1.1
+
++ Sfarx stalling exploit fixed
++ Fark static mode adjusted (drains slower, but no energy gain during and using it drains half your energy)
++ Behavior of certain fights restricting your character / powers has been disabled
++ Combo meter now resets on restart, checkpoint and death
+& Stage IDs for debugging that were accidentally left in have been removed

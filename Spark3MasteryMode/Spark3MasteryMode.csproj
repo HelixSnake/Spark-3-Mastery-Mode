@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisableEJElectricity.cs" />
     <Compile Include="DisableForcedCharacter.cs" />
     <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="MakeChallengeParry.cs" />
