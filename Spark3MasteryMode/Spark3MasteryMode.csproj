@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisableForcedCharacter.cs" />
+    <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="MakeChallengeParry.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
