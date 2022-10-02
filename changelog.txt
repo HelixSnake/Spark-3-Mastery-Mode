@@ -18,3 +18,7 @@ Release 1.1
 + Behavior of certain fights restricting your character / powers has been disabled
 + Combo meter now resets on restart, checkpoint and death
 & Stage IDs for debugging that were accidentally left in have been removed
+
+Release 1.2
+
++ Fixed EJ spawning with electricity active in Throwback fight
