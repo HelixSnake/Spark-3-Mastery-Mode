@@ -62,22 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisableEJElectricity.cs" />
-    <Compile Include="DisableForcedCharacter.cs" />
-    <Compile Include="FixComboMeterReset.cs" />
-    <Compile Include="MakeChallengeParry.cs" />
-    <Compile Include="MasteryDifficulty.cs" />
-    <Compile Include="MasteryMod.cs" />
-    <Compile Include="NerfStaticMode.cs" />
+    <Compile Include="EnemiesDieInstantlyMod.cs" />
     <Compile Include="PatchEnemyDamage.cs" />
-    <Compile Include="PatchRaidTimeLimit.cs" />
-    <Compile Include="PatchScoreTimeLimit.cs" />
-    <Compile Include="PatchSfarxExploit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LockPauseScreenDifficulty.cs" />
-    <Compile Include="SetItemPrices.cs" />
-    <Compile Include="SetNewMedalThresholds.cs" />
-    <Compile Include="ShowStageID.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

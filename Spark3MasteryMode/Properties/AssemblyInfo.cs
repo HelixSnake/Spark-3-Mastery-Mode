@@ -4,16 +4,16 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using Spark3MasteryMode;
 
-[assembly: MelonInfo(typeof(MasteryMod), "Mastery Mode", "0.1.2", "Helix Snake")]
+[assembly: MelonInfo(typeof(EnemiesDieInstantlyMod), "Enemies Die Instantly", "0.1.0", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Spark3MasteryMode")]
+[assembly: AssemblyTitle("Spark3EnemiesDieInstantly")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Spark3MasteryMode")]
+[assembly: AssemblyProduct("Spark3EnemiesDieInstantly")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
