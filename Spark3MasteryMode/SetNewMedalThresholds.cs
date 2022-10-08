@@ -9,8 +9,9 @@ namespace Spark3MasteryMode
 
     [HarmonyPatch(typeof(LevelData))]
     [HarmonyPatch("Awake")]
-    class SpeedMedalsEveryLevel
+    class AddMedalsToLevels
     {
+        public static List<int> LevelsWithScoreMedalsAdded = new List<int> { 6, 15, 30, 26 };
         private static void Prefix(LevelData __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
@@ -18,19 +19,27 @@ namespace Spark3MasteryMode
                 if (__instance.ID >= 0)
                 {
                     __instance.HasSpeedMedals = true;
+                    if (LevelsWithScoreMedalsAdded.Contains(__instance.ID))
+                    {
+                        __instance.HasScoreMedals = true;
+                    }    
                 }
             }
         }
     }
     [HarmonyPatch(typeof(GameProgressVariables))]
     [HarmonyPatch("Start")]
-    class SpeedMedalsPauseMenu
+    class MedalsPauseMenu
     {
         private static void Prefix(GameProgressVariables __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
             {
                 __instance.NoTimeMedal = false;
+                if (AddMedalsToLevels.LevelsWithScoreMedalsAdded.Contains(Save.CurrentStageIndex))
+                {
+                    __instance.NoScoreMedal = false;
+                }
             }
         }
     }
@@ -45,10 +54,13 @@ namespace Spark3MasteryMode
         }
         private static void Postfix(WorldMapCursor __instance, ref bool __state, ref LevelData ___StageData)
         {
-            if (__state && ___StageData != null && ___StageData.LevelType == StageType.Collectathon && MasteryMod.DifficultyIsMastery())
+            if (MasteryMod.DifficultyIsMastery())
             {
-                __instance.MedalsHolder.SetActive(true);
-                __instance.CollectathonMenu.SetActive(false);
+                if (__state && ___StageData != null && ___StageData.LevelType == StageType.Collectathon)
+                {
+                    __instance.MedalsHolder.SetActive(true);
+                    __instance.CollectathonMenu.SetActive(false);
+                }
             }
         }
     }
@@ -63,6 +75,24 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
+                // Make all targets impossible until they're set
+                for (int i = 0; i < Save.SpeedGoldTargets.Length; i++)
+                {
+                    Save.SpeedGoldTargets[i] = 0;
+                }
+                for (int i = 0; i < Save.SpeedDiaTargets.Length; i++)
+                {
+                    Save.SpeedDiaTargets[i] = 0;
+                }
+                for (int i = 0; i < Save.ScoreGoldTargets.Length; i++)
+                {
+                    Save.ScoreGoldTargets[i] = 1000000000000000000;
+                }
+                for (int i = 0; i < Save.ScoreDiaTargets.Length; i++)
+                {
+                    Save.ScoreDiaTargets[i] = 1000000000000000000;
+                }
+                /*
                 Save.SpeedGoldTargets[0] = 95f;
                 Save.SpeedDiaTargets[0] = 90f;
                 Save.SpeedGoldTargets[1] = 80f;
@@ -75,6 +105,7 @@ namespace Spark3MasteryMode
                 Save.SpeedDiaTargets[5] = 180f;
                 Save.ScoreGoldTargets[7] = 600000f;
                 Save.ScoreDiaTargets[7] = 1000000f;
+                */
             }
         }
     }
