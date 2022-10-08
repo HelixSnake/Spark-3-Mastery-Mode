@@ -56,6 +56,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Steam\steamapps\common\Spark the Electric Jester 3\Spark the Electric Jester 3_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.TextCoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Steam\steamapps\common\Spark the Electric Jester 3\Spark the Electric Jester 3_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Steam\steamapps\common\Spark the Electric Jester 3\Spark the Electric Jester 3_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Steam\steamapps\common\Spark the Electric Jester 3\Spark the Electric Jester 3_Data\Managed\UnityEngine.UI.dll</HintPath>
@@ -69,6 +77,7 @@
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
     <Compile Include="NerfStaticMode.cs" />
+    <Compile Include="NewShopText.cs" />
     <Compile Include="PatchEnemyDamage.cs" />
     <Compile Include="PatchRaidTimeLimit.cs" />
     <Compile Include="PatchScoreTimeLimit.cs" />

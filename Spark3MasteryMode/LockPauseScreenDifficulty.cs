@@ -13,13 +13,12 @@ namespace Spark3MasteryMode
     [HarmonyPatch("Update")]
     class SetDifficultyMinimumPauseMenu
     {
-        private static void Prefix(out bool __state)
+        private static void Prefix()
         {
-            __state = MasteryMod.DifficultyIsMastery();
         }
-        private static void Postfix(bool __state, WorldMapPauseMenu __instance)
+        private static void Postfix(WorldMapPauseMenu __instance)
         {
-            if (__state)
+            if (Save.GetCurrentSave().OriginalCombatDificulty == 5)
             {
                 if (Save.GetCurrentSave().CombatDificulty < 5 || Save.GetCurrentSave().PlatformingDificulty < 2)
                 {
