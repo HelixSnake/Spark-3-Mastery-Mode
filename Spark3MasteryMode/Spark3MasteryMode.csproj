@@ -85,6 +85,7 @@
     <Compile Include="PatchSfarxExploit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LockPauseScreenDifficulty.cs" />
+    <Compile Include="ReduceBlinkCost.cs" />
     <Compile Include="SetItemPrices.cs" />
     <Compile Include="SetNewMedalThresholds.cs" />
     <Compile Include="ShowStageID.cs" />

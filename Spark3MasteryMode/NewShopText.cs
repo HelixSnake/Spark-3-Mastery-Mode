@@ -42,6 +42,7 @@ namespace Spark3MasteryMode
                 __instance.SpecialItens[1].Description = "This is going to be your biggest time saver on stages with combat. Make sure to make good use of this.";
                 __instance.SpecialItens[2].Description = "It was a hard decision, but I can't have you just skipping stages through super magnet dashes, and this power is just generally way too good.";
                 __instance.SpecialItens[3].Description = "The UI for your combo multiplier is misleading - a full combo bar is actually 4x damage. Make sure to keep it full as much as possible.";
+                __instance.SpecialItens[4].Description = "I've modified this to use less energy. Use it to keep your juggles going!";
                 __instance.JesterItens[0].Description = "Reaper Jester's parry has a second hit that counts as a second parry - when parrying single red attacks, you can use this to break an enemy or boss's armor faster.";
                 __instance.JesterItens[1].Description = "In addition to Float's platforming abilities, she also has a faster homing attack. Float's floating ability is not just useful for making long or precise jumps, but also for climbing with walljumps.";
                 __instance.JesterItens[2].Description = "Fark's static mode may be nerfed but his double air dash with invulnerability, great DPS and ability to heal will make him a valuable tool. His air dash has more iframes than it looks and is great for dodging boss AOE attacks, even Clarity Centralis's long lasting one.";
