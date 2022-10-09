@@ -93,18 +93,36 @@ namespace Spark3MasteryMode
                     Save.ScoreDiaTargets[i] = 1000000000000000000;
                 }
                 /*
+                // alpine carrera
                 Save.SpeedGoldTargets[0] = 95f;
                 Save.SpeedDiaTargets[0] = 90f;
+                // doublemoon villa
                 Save.SpeedGoldTargets[1] = 80f;
-                Save.SpeedDiaTargets[1] = 75f;
+                Save.SpeedDiaTargets[1] = 70f;
+                // high rise tracks
                 Save.SpeedGoldTargets[2] = 40f;
                 Save.SpeedDiaTargets[2] = 32f;
+                // cold-dry desert
                 Save.SpeedGoldTargets[3] = 36f;
                 Save.SpeedDiaTargets[3] = 31f;
+                // A.M. Village
+                Save.SpeedGoldTargets[4] = 45f;
+                Save.SpeedDiaTargets[4] = 41f;
+                // Saw Man
+                Save.SpeedGoldTargets[8] = 95f;
+                Save.SpeedDiaTargets[8] = 85f;
+                // slope jumping
+                Save.SpeedGoldTargets[100] = 31f;
+                Save.SpeedDiaTargets[100] = 28f;
+                // jester dash
+                Save.SpeedGoldTargets[101] = 45f;
+                Save.SpeedDiaTargets[101] = 42f;
+                // charged jester dash
+                Save.SpeedGoldTargets[102] = 48f;
+                Save.SpeedDiaTargets[102] = 45f;
+
                 Save.SpeedGoldTargets[5] = 190f;
                 Save.SpeedDiaTargets[5] = 180f;
-                Save.ScoreGoldTargets[7] = 600000f;
-                Save.ScoreDiaTargets[7] = 1000000f;
                 */
             }
         }
