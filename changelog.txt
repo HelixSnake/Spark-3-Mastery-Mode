@@ -22,3 +22,14 @@ Release 1.1
 Release 1.2
 
 + Fixed EJ spawning with electricity active in Throwback fight
+
+Release 2.0 (pending)
+
++ Added speed medals to more levels
++ Added score medals to more levels
++ Set all score and speed medals as unreachable (so that you don't have to make a new save for every content update)
++ Made all exploration medals uncollectable (same reason as above)
++ Added new text to Shopalo giving hints on advance techniques and playstyle advice
+& Made it so that you can't accidentally break your difficulty by changing it without the mod installed
++ Reduced the cost of Blink (the teleport) from 25 to 15 to give you more reason to use it
+& Fixed bug where changing characters during static mode stopped energy gain until you switch back to Fark

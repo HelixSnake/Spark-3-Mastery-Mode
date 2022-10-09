@@ -33,4 +33,17 @@ namespace Spark3MasteryMode
             } 
         }
     }
+
+    [HarmonyPatch(typeof(CharacterAnimatorChange))]
+    [HarmonyPatch("SwitchCharacterActions")]
+    class EnableEnergyOnCharacterChange
+    {
+        static private void Postfix()
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                Dificulty.EnergyGainMultiplier = 1;
+            }
+        }
+    }
 }
