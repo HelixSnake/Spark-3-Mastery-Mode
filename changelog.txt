@@ -23,7 +23,7 @@ Release 1.2
 
 + Fixed EJ spawning with electricity active in Throwback fight
 
-Release 2.0 (pending)
+Release 2.0
 
 + Added speed medals to more levels
 + Added score medals to more levels
