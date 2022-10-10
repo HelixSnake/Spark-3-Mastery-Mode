@@ -35,6 +35,8 @@ Release 2.0 (pending)
 & Fixed bug where changing characters during static mode stopped energy gain until you switch back to Fark
 + Increased visible distance of exploration medals
 + Changed description of Mastery difficulty on save file create screen
+& Fixed bug where difficulty on save slot menu might say "casual/casual"
+& Fixed bug where difficulty didn't correctly display on world map pause menu
 
 AREA 1 FINISHED
 
