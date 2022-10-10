@@ -97,27 +97,27 @@ namespace Spark3MasteryMode
                 Save.SpeedGoldTargets[0] = 95f;
                 Save.SpeedDiaTargets[0] = 90f;
                 // doublemoon villa
-                Save.SpeedGoldTargets[1] = 80f;
-                Save.SpeedDiaTargets[1] = 70f;
+                Save.SpeedGoldTargets[1] = 85f;
+                Save.SpeedDiaTargets[1] = 75f;
                 Save.ScoreGoldTargets[1] = 400000f;
                 Save.ScoreDiaTargets[1] = 550000f;
                 // high rise tracks
                 Save.SpeedGoldTargets[2] = 40f;
                 Save.SpeedDiaTargets[2] = 32f;
-                Save.ScoreGoldTargets[2] = 260000f;
-                Save.ScoreDiaTargets[2] = 290000f;
+                Save.ScoreGoldTargets[2] = 280000f;
+                Save.ScoreDiaTargets[2] = 300000f;
                 // cold-dry desert
                 Save.SpeedGoldTargets[3] = 36f;
-                Save.SpeedDiaTargets[3] = 31f;
+                Save.SpeedDiaTargets[3] = 32f;
                 // A.M. Village
                 Save.SpeedGoldTargets[4] = 45f;
                 Save.SpeedDiaTargets[4] = 41f;
                 // Saw Man
-                Save.SpeedGoldTargets[8] = 95f;
-                Save.SpeedDiaTargets[8] = 85f;
+                Save.SpeedGoldTargets[9] = 90f;
+                Save.SpeedDiaTargets[9] = 80f;
                 // slope jumping
-                Save.SpeedGoldTargets[100] = 31f;
-                Save.SpeedDiaTargets[100] = 28f;
+                Save.SpeedGoldTargets[100] = 32f;
+                Save.SpeedDiaTargets[100] = 30f;
                 // jester dash
                 Save.SpeedGoldTargets[101] = 45f;
                 Save.SpeedDiaTargets[101] = 42f;

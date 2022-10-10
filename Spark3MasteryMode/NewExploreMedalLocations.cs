@@ -55,7 +55,7 @@ namespace Spark3MasteryMode
         public static Dictionary<(int, int), Vector3> NewMedalLocations = new Dictionary<(int, int), UnityEngine.Vector3> {
             {(1, 0), new Vector3(183.2969f, 448.6375f, -2602.669f) },
             {(1, 2), new Vector3(300.5526f, 478.2237f, -2195.653f) },
-            {(1, 8), new Vector3(-359.947f, 775.5374f, 2340.729f) },
+            {(1, 8), new Vector3(-359.947f, 772.5374f, 2340.729f) },
         };
         private static void Prefix(WorldMedal __instance)
         {
