@@ -92,16 +92,20 @@ namespace Spark3MasteryMode
                 {
                     Save.ScoreDiaTargets[i] = 1000000000000000000;
                 }
-                /*
+                
                 // alpine carrera
                 Save.SpeedGoldTargets[0] = 95f;
                 Save.SpeedDiaTargets[0] = 90f;
                 // doublemoon villa
                 Save.SpeedGoldTargets[1] = 80f;
                 Save.SpeedDiaTargets[1] = 70f;
+                Save.ScoreGoldTargets[1] = 400000f;
+                Save.ScoreDiaTargets[1] = 550000f;
                 // high rise tracks
                 Save.SpeedGoldTargets[2] = 40f;
                 Save.SpeedDiaTargets[2] = 32f;
+                Save.ScoreGoldTargets[2] = 260000f;
+                Save.ScoreDiaTargets[2] = 290000f;
                 // cold-dry desert
                 Save.SpeedGoldTargets[3] = 36f;
                 Save.SpeedDiaTargets[3] = 31f;
@@ -120,7 +124,7 @@ namespace Spark3MasteryMode
                 // charged jester dash
                 Save.SpeedGoldTargets[102] = 48f;
                 Save.SpeedDiaTargets[102] = 45f;
-
+                /*
                 Save.SpeedGoldTargets[5] = 190f;
                 Save.SpeedDiaTargets[5] = 180f;
                 */

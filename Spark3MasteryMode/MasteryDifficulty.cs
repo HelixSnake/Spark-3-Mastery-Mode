@@ -26,7 +26,7 @@ namespace Spark3MasteryMode
                 newCol[i] = __instance.CombatDifiColor[i];
             }
             newNames[i] = "MASTERY MODE";
-            newDesc[i] = "Enemies are tougher and meaner, along with various other changes. Can not change difficulty after starting.";
+            newDesc[i] = "Enemies are tougher and meaner, along with other changes like new medal targets. Can't change difficulty after starting. NOTE: All targets are set WITHOUT magnet dashing (dashing during homing attack for speed boost). It's recommended that you DON'T use magnet dashes.";
             newCol[i] = Color.black;
 
             __instance.CombatDifiNames = newNames;

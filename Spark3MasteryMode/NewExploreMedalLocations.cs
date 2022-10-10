@@ -12,7 +12,7 @@ namespace Spark3MasteryMode
     [HarmonyPatch("SetExploreMedal")]
     class MakeExploreMedalsUncollectable
     {
-        private static List<int> enabledMedalStages = new List<int> { };
+        private static List<int> enabledMedalStages = new List<int> { 1, 2 };
         private static bool Prefix()
         {
             if (MasteryMod.DifficultyIsMastery())
