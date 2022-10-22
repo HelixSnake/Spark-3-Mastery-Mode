@@ -89,6 +89,7 @@
     <Compile Include="SetItemPrices.cs" />
     <Compile Include="SetNewMedalThresholds.cs" />
     <Compile Include="ShowStageID.cs" />
+    <Compile Include="SplitFinalUtopia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
