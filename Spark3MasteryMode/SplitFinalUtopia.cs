@@ -184,6 +184,7 @@ namespace Spark3MasteryMode
             {
                 if (ModifiedLevels.Contains(Save.LastStageStarted))
                 {
+                    __instance.StageToGoAfter = "0";
                     __instance.StageIndex = Save.LastStageStarted;
                     __instance.EnableLives = false;
                     __instance.SkipEndStageScreen = false;
