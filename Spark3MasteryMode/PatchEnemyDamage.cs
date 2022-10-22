@@ -32,9 +32,19 @@ namespace Spark3MasteryMode
 
     [HarmonyPatch(typeof(RadsamuEnemy))]
     [HarmonyPatch("Start")]
-    class PatchEnemyParryDamage
+    class PatchEnemyParryDamageAndNerfMotorheads
     {
-        private static void Postfix(RadsamuEnemy __instance)
+        private static void Prefix(RadsamuEnemy __instance)
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            { 
+                if (__instance.MaxHp == 0.05f) // nerf motorhead health
+                {
+                    __instance.MaxHp = 0.01f;
+                }
+            }
+        }
+            private static void Postfix(RadsamuEnemy __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
             {
