@@ -19,11 +19,14 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                // for debugging
-                //__instance.SpeedObject.SetActive(true);
-
-                //__instance.SpeedGoldGoal.text = "GOLD: " + WorldMapCursor.FormattedTime(Save.SpeedGoldTargets[Save.CurrentStageIndex]) + " ID: " + Save.CurrentStageIndex;
-
+                /*
+                float val1 = PlayerHealthAndStats.AttackMultiplierCombo.Evaluate(0.36f) * 1.36f;
+                float val2 = PlayerHealthAndStats.AttackMultiplierCombo.Evaluate(0.55f) * 1.55f;
+                float val3 = PlayerHealthAndStats.AttackMultiplierCombo.Evaluate(0.72f) * 1.72f;
+                float val4 = PlayerHealthAndStats.AttackMultiplierCombo.Evaluate(0.85f) * 1.85f;
+                float val5 = PlayerHealthAndStats.AttackMultiplierCombo.Evaluate(1f) * 2f;
+                __instance.SpeedGoldGoal.text = val1.ToString() + ", " + val2.ToString() + ", " + val3.ToString() + ", " + val4.ToString() + ", " + val5.ToString();
+            */
             }
         }
     }
