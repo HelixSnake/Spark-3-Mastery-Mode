@@ -71,6 +71,8 @@ namespace Spark3MasteryMode
             {("Speed Hint:\nSfarx", "While other characters have top speeds which they can not get past without downward slopes or other speed gaining mechanics, " +
                 "Sfarx has no top speed. He is generally faster in every case that doesn't involve a specific ability of another character, and as such " +
                 "should be your main choice when you want to go as fast as possible.")},
+            {("Speed Hint:\nSpeed Boosters", "Often it is a good idea to skip speed boosters (the wheel ones) - if you're already going really fast, they can actually slow you down! " +
+                "Keep track of which speed boosters, conveyer ramps, springs, etc. make you lose speed - they might be worth skipping.") },
             {("Speed Hint:\nJester Swipe", "When swiping certain oddly shaped clusters of bits, you will get different speeds and directions based on the distance, " +
                 "angle and height you press the swipe button. In addition, jumping after swiping will often give you more speed. Swiping can also teleport you to the bits, " +
                 "even through walls, without losing speed.")},

@@ -1,4 +1,4 @@
-Release 1.0
+Release 0.1.0
 
 + New difficulty added to save file creation - use this difficulty to use the mod. Can only be set on save file creation and can not be changed after.
 + all shop items are unlocked by default and 1 bit, except for super dash, speed up and damage up extra powers, which you can't buy
@@ -11,7 +11,7 @@ Release 1.0
 + Hardcore health levels (4 HP)
 + Challenge jester parry cooldown
 
-Release 1.1
+Release 0.1.1
 
 + Sfarx stalling exploit fixed
 + Fark static mode adjusted (drains slower, but no energy gain during and using it drains half your energy)
@@ -19,11 +19,11 @@ Release 1.1
 + Combo meter now resets on restart, checkpoint and death
 & Stage IDs for debugging that were accidentally left in have been removed
 
-Release 1.2
+Release 0.1.2
 
 + Fixed EJ spawning with electricity active in Throwback fight
 
-Release 2.0
+Release 0.2.0
 
 + Added speed medals to more levels
 + Added score medals to more levels
@@ -57,3 +57,12 @@ High Rise Tracks
 
 The following stages have some exploration medals moved:
 Doublemoon Villa
+
+Release 0.3.0 [Pending]
++ Split Final Utopia into 4 separate levels (1 stage, 3 boss fights) that are treated like normal levels, with a best time for each.
+	Unlocked after beating the "normal" Final Utopia.
+& Fixed a bug where Motorhead enemies would not die in one Charge Blast shot from Spark
++ Nerfed Magnet Dash's maximum effectiveness while making it more consistent in effectiveness when used at high speeds
++ Fixed bug where Fark and Reaper Jester could dash through certain barriers
++ Moved tips and hints to 2 unique menus in Shopalo's shop
+
