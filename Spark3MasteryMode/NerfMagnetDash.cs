@@ -26,6 +26,8 @@ namespace Spark3MasteryMode
     [HarmonyPatch("FixedUpdate")]
     class MakeMagnetDashMoreConsistent
     {
+        private const float ADDED_SPEED = 50f;
+        private const float MULTIPLIED_SPEED = 1.2f;
         static private bool Prefix(Action02_Homing __instance, ref Vector3 ___direction, ref float ___Speed, ref PlayerBhysics ___Player)
         {
             if (MasteryMod.DifficultyIsMastery())
@@ -38,7 +40,7 @@ namespace Spark3MasteryMode
                         ___direction = __instance.Target.position - __instance.transform.position;
                     }
                     ___direction = ___direction.normalized;
-                    ___Speed = Mathf.Max(___Speed, __instance.InitialHorizontalVelocity + 50);
+                    ___Speed = Mathf.Max(___Speed, __instance.InitialHorizontalVelocity * MULTIPLIED_SPEED + ADDED_SPEED);
                     ___Player.rigid.velocity = ___direction * ___Speed;
                     __instance.Actions.ChangeAction(1);
                     return false;
@@ -46,7 +48,7 @@ namespace Spark3MasteryMode
                 bool dashInput1 = __instance.Inp.Rewinp.GetAxis("Dash") > 0.9f;
                 bool dashInput2 = (int)typeof(Action00_Regular).GetField("DashInputCounter", BindingFlags.NonPublic | BindingFlags.Instance)
                     .GetValue(__instance.Actions.Action00) == 0;
-                if (dashInput1 && dashInput2 && dashAvailable && __instance.Actions.Action00.dashc)
+                if ((dashInput1 && dashInput2 || __instance.Inp.Rewinp.GetButtonDown("Dash")) && dashAvailable && __instance.Actions.Action00.dashc)
                 {
                     if (__instance.Target)
                     {
@@ -55,8 +57,8 @@ namespace Spark3MasteryMode
                     ___direction = ___direction.normalized;
                     Vector3 newDir = new Vector3(___direction.x, 0.001f, ___direction.z);
                     ___Speed *= newDir.magnitude;
-                    ___direction = newDir.normalized; ;
-                    ___Speed = Mathf.Max(___Speed, __instance.InitialHorizontalVelocity + 50);
+                    ___direction = newDir.normalized;
+                    ___Speed = Mathf.Max(___Speed, __instance.InitialHorizontalVelocity * MULTIPLIED_SPEED + ADDED_SPEED);
                     ___Player.rigid.velocity = ___direction * ___Speed;
                     __instance.Actions.ChangeAction(1);
                     return false;
