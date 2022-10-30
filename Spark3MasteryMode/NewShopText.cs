@@ -104,16 +104,32 @@ namespace Spark3MasteryMode
             {("Traversal Hint:\nAir Movement", "A general rule of thumb for climbing and making large gaps - you will often want to start as Float to make most use of her hover ability, " +
                 "and then switch to Fark to use both his air dashes. Remember if you use the first airdash with Fark, you can do a second one. Float can repeatedly hover into wall jumps " +
                 "for that extra height before using Fark.")},
-            
+            {("Traversal Hint:\nBig Jumps", "If you have a way to get a tremendous amount of speed, you might need all that speed to get a slope jump high enough to reach some " +
+                "locations. Keep an eye out for opportunities to go really fast right before a slope or an upwards slant in a rail that can be jumped to get a huge amount of height.")},
+
             {("Score Hint:\nGeneral Advice", "While you're routing for score, pay attention to which objects actually add the most score, or the most multiplier, " +
-                "and plan your route based on that. The biped robots give a ton of score, as do green capsules.")},
+                "and plan your route based on that. The biped robots give a ton of score, as do green capsules. Green capsules don't give you that much multiplier though, keep that in mind.")},
+            {("Score Hint:\nCheckpoints", "Checkpoints give you a TON of score and much more multiplier than green capsules. " +
+                "It's worth going out of your way to get them!")},
+            {("Score Hint:\nWeak Enemies", "If there's a route with a lot of weak enemies and bit bubbles you can homing attack through really quickly, it can be worth it to do so, " +
+                "especially early on in the run. Doing so will get your mulplier up significantly.")},
+
+
+            {("Exploit Fixes:\nDash Phasing", "Fark and Reaper Jester can no longer phase through some solid walls using their dash. You'll have to work a bit harder " +
+                "if you want out of bounds")},
+            {("Exploit Fixes:\nSfarx Stalling", "The exploit that lets Sfarx ignore the fall damage mechanic to skip Pacific Abyss and Final Utopia has been fixed. " +
+                "No skipping the meat of these levels anymore.")},
+
         };
 
         public static List<(string, string)> HintsList = new List<(string, string)>()
         {
-            {("Alpine Carrera:\nSpeed", "It is always faster to do car segments on foot when you can. On Alpine Carrera, you should boost by " +
+            {("Alpine Carrera:\nSpeed", "Maximize the utility of your boost meter by " +
                 "repeatedly quickly tapping the boost button instead of holding it. Try to space your taps so you just barely use all of it up, " +
                 "and save it when there's a boost pad.") },
+
+            {("Lost Ravine:\nSpeed", "It's actually possible to skip the fights on this level. Figuring out how to is critical for beating the speed medal targets. " +
+                "For a hint - closed doors are not always impassable.") },
         };
         public static GameObject GetTipsMenu(ShopaloShop shopBase)
         {

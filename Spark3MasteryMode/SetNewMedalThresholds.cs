@@ -129,6 +129,8 @@ namespace Spark3MasteryMode
                 // lost riviera
                 Save.SpeedGoldTargets[5] = 180f;
                 Save.SpeedDiaTargets[5] = 160f;
+                Save.ScoreGoldTargets[5] = 350000f;
+                Save.ScoreDiaTargets[5] = 425000f;
 
                 // lost ravine
                 Save.SpeedGoldTargets[6] = 130f;
