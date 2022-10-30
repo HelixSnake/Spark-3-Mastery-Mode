@@ -124,29 +124,32 @@ namespace Spark3MasteryMode
                 // charged jester dash
                 Save.SpeedGoldTargets[102] = 48f;
                 Save.SpeedDiaTargets[102] = 45f;
-                
+
                 /*
                 // lost riviera
-                Save.SpeedGoldTargets[5] = 190f;
-                Save.SpeedDiaTargets[5] = 180f;
+                Save.SpeedGoldTargets[5] = 180f;
+                Save.SpeedDiaTargets[5] = 160f;
 
                 // lost ravine
-                Save.SpeedGoldTargets[6] = 160f;
-                Save.SpeedDiaTargets[6] = 115f;
+                Save.SpeedGoldTargets[6] = 130f;
+                Save.SpeedDiaTargets[6] = 107f;
 
                 // canyon zero
-                // 7
+                Save.ScoreGoldTargets[7] = 700000;
+                Save.ScoreDiaTargets[7] = 1000000;
 
                 // beatdown tower
                 // 13
+                Save.SpeedGoldTargets[13] = 110f;
+                Save.SpeedDiaTargets[13] = 97f;
 
                 // arid hole
                 Save.SpeedGoldTargets[11] = 60f;
                 Save.SpeedDiaTargets[11] = 52f;
 
                 // splash grotto
-                Save.SpeedGoldTargets[12] = 55f;
-                Save.SpeedDiaTargets[12] = 42f;
+                Save.SpeedGoldTargets[12] = 50f;
+                Save.SpeedDiaTargets[12] = 41f;
 
                 // high speeds
                 Save.SpeedGoldTargets[103] = 54f;

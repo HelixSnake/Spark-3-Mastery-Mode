@@ -85,8 +85,9 @@ namespace Spark3MasteryMode
             {("Speed Hint:\nRail Braking 3", "Because of the cumulative effect of having energy meaning you can go fast enough to accelerate while maintaining that energy, " +
                 "getting energy on rail levels can be very important. It can be worth it to go somewhat out of your way to make sure you get some, and to not skip parts of rail sections " +
                 "if those parts can be used to gain more speed and energy.")},
-            {("Speed Hint:\nRail Swiping", "A very quick jump followed immediately by a jester swipe can be used to gain speed on rails when there is a line of bits - the swipe " +
-                "will often put you back on the rail with a speed boost. You should definitely make use of this when possible, since speed on rails is so important.")},
+            {("Speed Hint:\nRail Swiping", "A very quick jump followed, with a small delay, by a jester swipe can be used to gain speed on rails when there is a line of bits - the swipe " +
+                "will often put you back on the rail with a speed boost. You should definitely make use of this when possible, since speed on rails is so important. If this is inconsistent, " +
+                "and you find yourself coming off the rail, delay the jester swipe more.")},
             {("Speed Hint:\nFloat's Homing\nAttack", "In addition to Float's platforming abilities, she also has a faster homing attack - groups of enemies that are " +
                 "close enough together can allow float to get through them very quickly by mashing the homing attack button. Since histun pauses the timer, dashing " +
                 "through enemies this way is borderline instant.") },

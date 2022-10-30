@@ -65,4 +65,5 @@ Release 0.3.0 [Pending]
 + Nerfed Magnet Dash's maximum effectiveness while making it more consistent in effectiveness when used at high speeds
 + Fixed bug where Fark and Reaper Jester could dash through certain barriers
 + Moved tips and hints to 2 unique menus in Shopalo's shop
+& Fixed bug that caused bosses to not behave correctly - some attacks bosses were canceling should now work properly
 
