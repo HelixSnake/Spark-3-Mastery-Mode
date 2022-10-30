@@ -52,7 +52,7 @@ namespace Spark3MasteryMode
                 __instance.ArmourDamageOnParry *= 0.35f;
                 __instance.LeaderAttackInterval *= 0.5f;
                 __instance.BackgroundAttackInterval *= 0.5f;
-                __instance.BackgroundAttackRecoveryTime = Mathf.Min(__instance.LeaderAttackRecoveryTime, __instance.BackgroundAttackRecoveryTime * 0.5f);
+                __instance.BackgroundAttackRecoveryTime = Mathf.Max(__instance.LeaderAttackRecoveryTime, __instance.BackgroundAttackRecoveryTime * 0.5f);
                 __instance.DontAttackIfAnotherAttackHasStarted = false;
             }
         }
