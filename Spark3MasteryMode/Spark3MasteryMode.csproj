@@ -97,6 +97,7 @@
     <Compile Include="MakeChallengeParry.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
+    <Compile Include="MoreAccurateComboMeter.cs" />
     <Compile Include="NerfMagnetDash.cs" />
     <Compile Include="NerfStaticMode.cs" />
     <Compile Include="NewExploreMedalLocations.cs" />

@@ -30,112 +30,113 @@ namespace Spark3MasteryMode
         {
             {("Changes:\nEnemies", "Enemies have not only been given <color=red>more health and armor</color>, but made <color=red>more aggressive</color>. Health and armor levels are " +
                 "about <color=red>3</color> times what they are in Hardcore.") },
-            {("Changes:\nDifficulty", "While you have as much health as on Hardcore difficulty, your parry timing is that of Challenge Jester. " +
-                "Make sure you learn to time it well, and be careful of the cooldown after releasing block!") },
-            {("Changes:\nStatic Mode", "Static mode now drains half of your energy on use, to prevent using it to heal and then switching to not lose " +
-                "energy. You also can't gain energy while it's active, but it drains less slowly. It is still situationally useful and a good way of " +
+            {("Changes:\nDifficulty", "While you have as much health as on <color=red>Hardcore difficulty</color>, your <color=red>parry timing</color> is that of <color=red>Challenge Jester.</color> " +
+                "Make sure you learn to time it well, and be careful of the <color=red>cooldown</color> after releasing block!") },
+            {("Changes:\nStatic Mode", "<color=cyan>Static mode</color> now <color=red>drains half of your energy</color> on use, to prevent using it to heal and then switching to not lose " +
+                "energy. You also <color=red>can't gain energy</color> while it's active, but it <color=green>drains less slowly.</color> It is still situationally useful and a good way of " +
                 "getting back health regardless.") },
-            {("Changes:\nBlink", "Your teleport special power, Blink, now takes 15 energy instead of 25. In some fights you might want to make good " +
-                "use of it, since you might not be able to keep the aggression up as well when the enemy is attacking!") },
-            {("Changes:\nMagnet Dash", "A Magnet Dash is a dash right after a homing attack. " +
-                "Magnet Dash has been made less overpowered, but more consistent. If you have speed, it will generally " +
-                "give you the same amount of extra speed, regardless of vertical angle. You still should try to magent dash in the enemy's direction for the most speed.") },
-            
-            {("Combat Hint:\nCombo Meter", "The UI is actually inaccurate - your combo meter goes from 1x to 4x. Always keep it as full as possible, " +
-                "otherwise you will do pitiful damage, especially in Mastery Mode. If you have to make space from the enemy, keep the meter up with " +
-                "shots.")},
-            {("Combat Hint:\nJuggling", "After you break a boss's armor, the amount of time they stay open is proportionate to the amount of time they " +
-                "spend on the ground. Make sure to keep your juggle going as long as possible while they're open. Remember, Spark can land during juggles, " +
-                "and get his jump / dashes back.")},
-            {("Combat Hint:\nHyper Surge", "Hyper Surge is going to be your biggest time saver on stages with combat. Make sure to make good use of this.")},
-            {("Combat Hint:\nCharged Kick", "Charged Kick does a suprising amount of damage with a full combo. "+
-                "Getting into position and charging it is a good thing to do in between enemy waves or Throwback's boss transitions.")},
-            {("Combat Hint:\nScary Face", "Float may be limited in combat, but her Scary Face passive does a lot of free damage even when not " +
+            {("Changes:\nBlink", "Your teleport special power, <color=magenta>Blink</color>, now takes <color=green>15 energy instead of 25.</color> In some fights you might want to make good " +
+                "use of it to <color=magenta>keep up your juggle,</color> since you might not be able to keep the aggression up as well when the enemy is attacking!") },
+            {("Changes:\nMagnet Dash", "A <color=cyan>Magnet Dash</color> is a dash right after a <color=cyan>homing attack. " +
+                "Magnet Dash</color> has been made <color=red>less overpowered,</color> but <color=green>more consistent. If you have speed,</color> it will generally " +
+                "give you the <color=green>same amount of extra speed,</color> regardless of vertical angle. You still should try to magent dash in the enemy's direction for the most speed.") },
+            {("Changes:\nNew Combo UI", "The <color=orange>Combo Meter</color> has been given a new UI for the <color=orange>multiplier.</color> The way the combo multiplier works <color=orange>hasn't changed</color> - but the new number on the multiplier is <color=green>now correct,</color> compared to the <color=red>incorrect</color> old UI.") },
+
+            {("Combat Hint:\nCombo Meter", "Your <color=orange>combo meter</color> goes from <color=green>1x to 4x.</color> Always keep it <color=green>as full as possible,</color> " +
+                "otherwise you will do <color=red>pitiful damage,</color> especially in Mastery Mode. If you have to make space from the enemy, <color=cyan>keep the meter up with " +
+                "shots.</color>")},
+            {("Combat Hint:\nJuggling", "After you break a <color=red>boss's armor,</color> the amount of time they stay open is proportionate to the amount of time they " +
+                "spend <color=red>on the ground.</color> Make sure to <color=green>keep your juggle going as long as possible</color> while they're open. Remember, Spark can land during juggles, " +
+                "and get his <color=cyan>jump / dashes</color> back.")},
+            {("Combat Hint:\nHyper Surge", "<color=yellow>Hyper Surge</color> is going to be your biggest time saver on stages with combat. Make sure to make good use of this.")},
+            {("Combat Hint:\nCharged Kick", "<color=yellow>Charged Kick</color> does a suprising amount of <color=green>damage</color> with a full <color=orange>combo meter.</color> "+
+                "Getting into position and <color=yellow>charging it</color> is a good thing to do in between enemy waves or Throwback's boss transitions.")},
+            {("Combat Hint:\nScary Face", "<color=purple>Float</color> may be limited in combat, but her <color=red>Scary Face</color> passive does a <color=green>lot of free damage</color> even when not " +
                 "attacking with her. Keeping her in your party even for combat stages is a good idea.")},
-            {("Combat Hint:\nCharge Shot", "You can charge your shot with any character, and the charge will maintain between character switches. " +
-                "Keep your shots charged and unleash them with Spark or Sfarx. Sfarx's charge shot gives you a lot of energy and combo and does a lot " +
-                "of damage, so use it when you can.")},
-            {("Combat Hint:\nStoring Attacks", "You can store the hitbox of any attack by switching characters when it is active. This works best with " +
-                "lingering hitboxes like Fark's light attack combo ender and Spark's air heavy attack combo ender. When switching back to the character, " +
-                "the hitbox will reactivate, and you can attack while it is active, increasing your DPS.")},
-            {("Combat Hint:\nDash I-Frames", "Fark's dash has considerably more i-frames than it looks. Even for big, long lasting AOE attacks, " +
-                "Fark can use multiple dashes to avoid damage completely without having to back off.")},
-            {("Combat Hint:\nSkipping Combat", "While getting good at combat is useful, you also want to skip combat arenas as much as possible. " +
-                "A lot of arenas can have their activation box maneuvered around, and some can be escaped after activating. " +
-                "Remember that jester swipes and homing attacks can take you through walls!")},
+            {("Combat Hint:\nCharge Shot", "You can <color=cyan>charge your shot</color> with any character, and the charge will <color=cyan>maintain between character switches.</color> " +
+                "Keep your shots charged and unleash them with <color=yellow>Spark</color> or <color=cyan>Sfarx.</color> Sfarx's charge shot gives you a lot of <color=cyan>energy</color> and <color=orange>combo</color> and does a lot " +
+                "of <color=green>damage,</color> so use it when you can.")},
+            {("Combat Hint:\nStoring Attacks", "You can store the <color=yellow>hitbox</color> of any attack by <color=yellow>switching characters when it is active.</color> This works best with " +
+                "lingering hitboxes like <color=orange>Fark's light attack combo ender</color> and <color=yellow>Spark's air heavy attack combo ender.</color> When switching back to the character, " +
+                "the hitbox will <color=yellow>reactivate,</color> and you can attack while it is active, increasing your DPS.")},
+            {("Combat Hint:\nDash I-Frames", "<color=orange>Fark's dash</color> has <color=orange>considerably more i-frames</color> than it looks. Even for big, <color=red>long lasting AOE attacks,</color> " +
+                "Fark can use <color=orange>multiple dashes</color> to <color=green>avoid damage</color> completely without having to back off.")},
+            {("Combat Hint:\nSkipping Combat", "While getting good at combat is useful, you also want to <color=green>skip combat arenas</color> as much as possible. " +
+                "A lot of arenas can have their activation box <color=green>maneuvered around,</color> and some can be <color=green>escaped after activating.</color> " +
+                "Remember that <color=yellow>jester swipes</color>  and <color=cyan>homing attacks</color> can <color=green>take you through walls!</color> ")},
 
-            {("Speed Hint:\nExperimentation", "When you are testing your run and experimenting with the various mechanics, remember the Radar has a " +
-                "speed indicator on it - use it to make sure you're doing the right things to gain and maintain speed!")},
+            {("Speed Hint:\nExperimentation", "When you are testing your run and experimenting with the various mechanics, remember the <color=magenta>Radar</color> has a " +
+                "<color=green>speed indicator</color> on it - use it to make sure you're doing the <color=green>right things</color> to gain and maintain speed!")},
             {("Speed Hint:\nSfarx", "While other characters have top speeds which they can not get past without downward slopes or other speed gaining mechanics, " +
-                "Sfarx has no top speed. He is generally faster in every case that doesn't involve a specific ability of another character, and as such " +
-                "should be your main choice when you want to go as fast as possible.")},
-            {("Speed Hint:\nSpeed Boosters", "Often it is a good idea to skip speed boosters (the wheel ones) - if you're already going really fast, they can actually slow you down! " +
-                "Keep track of which speed boosters, conveyer ramps, springs, etc. make you lose speed - they might be worth skipping.") },
-            {("Speed Hint:\nJester Swipe", "When swiping certain oddly shaped clusters of bits, you will get different speeds and directions based on the distance, " +
-                "angle and height you press the swipe button. In addition, jumping after swiping will often give you more speed. Swiping can also teleport you to the bits, " +
-                "even through walls, without losing speed.")},
-            {("Speed Hint:\nRail Boosting", "Boosting is going to be one of your most powerful tools in levels with rails. Remember you can boost while crouching - utilize both to maximize speed.")},
-            {("Speed Hint:\nRail Braking", "The amount of energy you get while braking is proportionate to your speed - if you're going really fast, you can get a lot of energy with one quick tap " +
-                "without losing much speed at all. Other good moments to brake are right after a rail jester swipe, or hitting a boost pad.")},
-            {("Speed Hint:\nRail Braking 2", "Once you reach a certain speed threshold, you can get more energy through tapping brake than you use when boosting to compensate for the " +
-                "lost speed. At this point, you can keep gaining speed indefinitely and end with a full energy meter. Your top priority should be getting to this level of speed on a rail " +
+                "<color=cyan>Sfarx has no top speed.</color> He is generally <color=green>faster</color> in every case that doesn't involve a specific ability of another character, and as such " +
+                "should be your <color=green>main choice</color> when you want to go <color=green>as fast as possible.</color>")},
+            {("Speed Hint:\nSpeed Boosters", "Often it is a good idea to <color=green>skip speed boosters</color> (the wheel ones) - if you're already going really fast, they can actually <color=red>slow you down!</color> " +
+                "Keep track of which speed boosters, conveyer ramps, springs, etc. make you <color=red>lose speed</color> - they might be worth skipping.") },
+            {("Speed Hint:\nJester Swipe", "When <color=yellow>swiping</color> certain oddly shaped <color=yellow>clusters of bits</color>, you will get different speeds and directions based on the distance, " +
+                "angle and height you press the swipe button. In addition, jumping after swiping will often give you <color=green>more speed.</color> <color=yellow>Swiping</color> can also <color=green>teleport you to the bits, " +
+                "even through walls, without losing speed.</color>")},
+            {("Speed Hint:\nRail Boosting", "<color=cyan>Boosting</color> is going to be one of your most powerful tools in levels with rails. Remember you can <color=cyan>boost while crouching</color> - utilize both to <color=green>maximize speed.</color>")},
+            {("Speed Hint:\nRail Braking", "The amount of <color=cyan>energy</color> you get while <color=cyan>braking</color> is proportionate to your speed - if you're going really fast, you can get a <color=cyan>lot of energy</color> with one <color=green>quick tap</color> " +
+                "without losing much speed at all.")},
+            {("Speed Hint:\nRail Braking 2", "Once you reach a <color=green>certain speed threshold,</color> you can <color=cyan>get more energy through tapping brake than you use when boosting</color> to compensate for the " +
+                "lost speed. At this point, you can keep <color=green>gaining speed indefinitely</color> and end with a <color=cyan>full energy meter.</color> Your top priority should be getting to this level of speed on a rail " +
                 "as often as possible.")},
-            {("Speed Hint:\nRail Braking 3", "Because of the cumulative effect of having energy meaning you can go fast enough to accelerate while maintaining that energy, " +
-                "getting energy on rail levels can be very important. It can be worth it to go somewhat out of your way to make sure you get some, and to not skip parts of rail sections " +
-                "if those parts can be used to gain more speed and energy.")},
-            {("Speed Hint:\nRail Swiping", "A very quick jump followed, with a small delay, by a jester swipe can be used to gain speed on rails when there is a line of bits - the swipe " +
-                "will often put you back on the rail with a speed boost. You should definitely make use of this when possible, since speed on rails is so important. If this is inconsistent, " +
-                "and you find yourself coming off the rail, delay the jester swipe more.")},
-            {("Speed Hint:\nFloat's Homing\nAttack", "In addition to Float's platforming abilities, she also has a faster homing attack - groups of enemies that are " +
-                "close enough together can allow float to get through them very quickly by mashing the homing attack button. Since histun pauses the timer, dashing " +
-                "through enemies this way is borderline instant.") },
+            {("Speed Hint:\nRail Braking 3", "Because of the cumulative effect of <color=cyan>having energy</color> meaning you can <color=green>go fast enough to accelerate while maintaining that energy,</color> " +
+                "<color=cyan>getting energy on rail levels</color> can be <color=green>very important.</color> It can be worth it to <color=green>go somewhat out of your way</color> to make sure you get some, and to not skip parts of rail sections " +
+                "if those parts can be used to <color=cyan>gain more speed and energy.</color>")},
+            {("Speed Hint:\nRail Swiping", "A very <color=cyan>quick jump</color> followed, with a small delay, by a <color=yellow>jester swipe</color> can be used to <color=green>gain speed on rails</color> when there is a <color=yellow>line of bits</color> - the swipe " +
+                "will often put you back on the rail with a <color=green>speed boost.</color> You should definitely make use of this when possible, since speed on rails is so important. <color=red>If this is inconsistent,</color> " +
+                "and you find yourself coming off the rail, <color=red>delay the jester swipe more.</color>")},
+            {("Speed Hint:\nFloat's Homing\nAttack", "In addition to <color=purple>Float's</color> platforming abilities, she also has a faster <color=cyan>homing attack</color> - <color=red>groups of enemies</color> that are " +
+                "close enough together can allow <color=purple>Float</color> to get through them <color=green>very quickly</color> by <color=green>mashing the homing attack button.</color> Since histun pauses the timer, dashing " +
+                "through enemies this way is <color=green>borderline instant.</color>") },
 
-            {("Traversal Hint:\nRunning Up Walls", "Running up walls will be an extremely important tool for you to learn. Almost anywhere an upward slope leads " +
-                "into a wall can be used to do it, and repeated dashes will keep you on the wall. When wallrunning, to transition around angled edges, run at an angle " +
-                "almost parallel to the edge.")},
-            {("Traversal Hint:\nSlope Jumping", "Using a charged jester dash on a slope and then immediately jumping can get you a lot of height with no runway - if you're having trouble " +
-                "angling your charged jester dash up the slope, angle it to the side first to 'ease' your character into aiming up the slope.")},
-            {("Traversal Hint:\nRamp Jumping", "Using a charged jester dash before a conveyer ramp can be a REALLY good tool for gaining a lot of height and distance. Make sure to time " +
-                "the jump while you're on the ramp. The faster you're going before hand, the more height you'll get.")},
-            {("Traversal Hint:\nStatic Mode", "Fark actually gets a boost to jump force from static mode, as well as quicker acceleration - if you have a short runway for a slope jump " +
-                "and can get enough energy, you might want to use static mode to get that extra height or distance.")},
-            {("Traversal Hint:\nAir Movement", "A general rule of thumb for climbing and making large gaps - you will often want to start as Float to make most use of her hover ability, " +
-                "and then switch to Fark to use both his air dashes. Remember if you use the first airdash with Fark, you can do a second one. Float can repeatedly hover into wall jumps " +
-                "for that extra height before using Fark.")},
-            {("Traversal Hint:\nBig Jumps", "If you have a way to get a tremendous amount of speed, you might need all that speed to get a slope jump high enough to reach some " +
-                "locations. Keep an eye out for opportunities to go really fast right before a slope or an upwards slant in a rail that can be jumped to get a huge amount of height.")},
+            {("Traversal Hint:\nRunning Up Walls", "<color=green>Running up walls</color> will be an <color=green>extremely important</color> tool for you to learn. Almost anywhere an <color=green>upward slope</color> leads " +
+                "into a <color=green>wall</color> can be used to do it, and <color=cyan>repeated dashes</color> will <color=cyan>keep you on the wall.</color> When wallrunning, to <color=green>transition around angled edges and avoid falling off,</color> run at an angle " +
+                "<color=green>almost parallel</color> to the edge.")},
+            {("Traversal Hint:\nSlope Jumping", "Using a <color=yellow>charged jester dash</color> on a slope and then <color=cyan>immediately jumping</color> can get you a <color=green>lot of height</color> with no runway - if you're having trouble " +
+                "angling your <color=yellow>charged jester dash</color> up the slope, <color=green>angle it to the side first to 'ease' your character into aiming up the slope.</color>")},
+            {("Traversal Hint:\nRamp Jumping", "Using a <color=yellow>charged jester dash</color> before a <color=grey>conveyer ramp</color> can be a REALLY good tool for <color=green>gaining a lot of height and distance.</color> Make sure to time " +
+                "the jump <color=grey>while you're on the ramp.</color> The <color=green>faster</color> you're going before hand, the <color=green>more height you'll get.</color>")},
+            {("Traversal Hint:\nStatic Mode", "<color=orange>Fark</color> actually gets a <color=cyan>boost to jump force</color> from <color=cyan>static mode,</color> as well as <color=green>quicker acceleration</color> - if you have a short runway for a <color=cyan>slope jump</color> " +
+                "and can get enough <color=cyan>energy,</color> you might want to use <color=cyan>static mode</color> to get that <color=green>extra height or distance.</color>")},
+            {("Traversal Hint:\nAir Movement", "A general rule of thumb for <color=green>climbing and making large gaps</color> - you will often want to start as <color=purple>Float</color> to make most use of her <color=purple>hover ability,</color> " +
+                "and then switch to <color=orange>Fark</color> to use <color=orange>both his air dashes.</color> Remember if you use the <color=orange>first airdash</color> with <color=orange>Fark,</color> you can do a <color=orange>second one.</color> <color=purple>Float</color> can <color=purple>repeatedly hover into wall jumps</color> " +
+                "for that <color=green>extra height</color> before using <color=orange>Fark.</color>")},
+            {("Traversal Hint:\nBig Jumps", "If you have a way to get a <color=green>tremendous amount of speed,</color> you might need all that speed to get a <color=cyan>slope jump</color> high enough to reach some " +
+                "locations. Keep an eye out for opportunities to go <color=green>really fast right before a slope, or an upwards slant in a rail</color> that can be jumped to get a <color=green>huge amount of height.</color>")},
 
-            {("Score Hint:\nGeneral Advice", "While you're routing for score, pay attention to which objects actually add the most score, or the most multiplier, " +
-                "and plan your route based on that. The biped robots give a ton of score, as do green capsules. Green capsules don't give you that much multiplier though, keep that in mind.")},
-            {("Score Hint:\nCheckpoints", "Checkpoints give you a TON of score and much more multiplier than green capsules. " +
-                "It's worth going out of your way to get them!")},
-            {("Score Hint:\nWeak Enemies", "If there's a route with a lot of weak enemies and bit bubbles you can homing attack through really quickly, it can be worth it to do so, " +
-                "especially early on in the run. Doing so will get your multiplier up significantly.")},
-            {("Score Hint:\nStrong Enemies", "A fast way to take out the biped robots is to use energy built elsewhere, and then get a lot of combo on really quickly with multihits like Spark, Fark and Sfarx's heavy air combo, " +
-                "along with Sfark's charge shot. Once your combo is about 3/4ths full, use Hyper Surge to kill them quickly along with any other nearby enemies.")},
-            {("Score Hint:\nWeigh Time\nVs Opportunity", "When you're deciding what to go for during score runs, always ask yourself how much time something takes versus how much you have to gain. " +
-                "Do I have to slow down too much to get this, or go too far out of my way? Can I break a lot of things here very quickly? Don't waste too much time breaking every little thing if they're not worth it.")},
-            {("Score Hint:\nMeasuring Score", "When you are prioritizing what to break, kill or collect, make sure to pay attention to the thing's actual worth in comparison to each other. You may find some things are more or less " +
-                "worth breaking than you thought. Remember that things scale with your multiplier, so break different things while the multiplier is about the same to see how they compare.")},
-            {("Score Hint:\nMath", "If you feel like actually doing math, the actual score worth of something is the amount of points gained divided by (multiplier + 1).")},
-            {("Score Hint:\nBreaking Stuff\nFaster", "You can break cargo containers while attacking on top of them with Spark, Fark, and Sfarx. Use heavy attack combos to break them. Concrete boxes give much more score than wooden ones and can be broken in a single heavy attack. " +
-                "Make good use of Hyper Surge as a way to destroy lots of tough breakables quickly; it's a good use of all the energy you build in score runs.")},
+            {("Score Hint:\nGeneral Advice", "While you're routing for <color=magenta>score,</color> pay attention to <color=magenta>which objects actually add the most score, or the most multiplier,</color> " +
+                "and plan your route based on that. The <color=red>biped robots</color> give a ton of <color=magenta>score,</color> as do <color=green>green capsules.</color> Green capsules don't give you that much multiplier though, keep that in mind.")},
+            {("Score Hint:\nCheckpoints", "<color=yellow>Checkpoints</color> give you a TON of <color=magenta>score</color> and <color=magenta>much more multiplier</color> than green capsules. " +
+                "It's worth <color=green>going out of your way</color> to get them!")},
+            {("Score Hint:\nWeak Enemies", "If there's a route with a lot of <color=cyan>weak enemies</color> and <color=yellow>bit bubbles</color> you can <color=cyan>homing attack</color> through really quickly, it can be <color=green>worth it to do so,</color> " +
+                "especially early on in the run. Doing so will <color=magenta>get your multiplier up significantly.</color>")},
+            {("Score Hint:\nStrong Enemies", "A fast way to take out the <color=red>biped robots</color> is to use <color=cyan>energy</color> built elsewhere, and then get a <color=orange>lot of combo really quickly</color> with multihits like <color=yellow>Spark,</color> <color=orange>Fark</color> and <color=cyan>Sfarx's</color> <color=yellow>heavy air combo,</color> " +
+                "along with <color=cyan>Sfark's</color> <color=green>charge shot.</color> Once your combo is about 3/4ths full, use <color=yellow>Hyper Surge</color> to kill them quickly <color=red>along with any other nearby enemies.</color>")},
+            {("Score Hint:\nWeigh Time\nVs Opportunity", "When you're deciding what to go for during <color=magenta>score runs,</color> always ask yourself <color=red>how much time</color> something takes versus <color=green>how much you have to gain.</color> " +
+                "Do I have to <color=red>slow down</color> too much to get this, or go <color=red>too far out of my way?</color> Can I <color=green>break a lot of things here very quickly?</color> <color=red>Don't waste too much time</color> breaking <color=red>every little thing</color> if they're <color=red>not worth it.</color>")},
+            {("Score Hint:\nMeasuring Score", "When you are prioritizing what to break, kill or collect, make sure to pay attention to the thing's actual <color=magenta>worth in comparison to each other.</color>  You may find some things are <color=green>more or less " +
+                "worth breaking than you thought.</color> Remember that things scale with your multiplier, so <color=green>break different things while the multiplier is about the same to see how they compare.</color>")},
+            {("Score Hint:\nMath", "If you feel like actually doing <color=red>math,</color> the actual <color=magenta>score worth</color> of something is the <color=magenta>amount of points gained divided by (multiplier + 1).</color>")},
+            {("Score Hint:\nBreaking Stuff\nFaster", "You can break <color=cyan>cargo containers</color> by <color=yellow>attacking on top of them</color> with <color=yellow>Spark,</color> <color=orange>Fark,</color> and <color=cyan>Sfarx.</color> Use <color=yellow>heavy attack combos</color> to break them. <color=grey>Concrete boxes</color> give <color=magenta>much more score</color> than wooden ones and <color=yellow>can be broken in a single heavy attack.</color> " +
+                "Make good use of <color=yellow>Hyper Surge</color> as a way to <color=cyan>destroy lots of tough breakables quickly</color>; it's a good use of all the <color=cyan>energy</color> you build in score runs.")},
 
-            {("Exploit Fixes:\nDash Phasing", "Fark and Reaper Jester can no longer phase through some solid walls using their dash. You'll have to work a bit harder " +
+            {("Exploit Fixes:\nDash Phasing", "<color=orange>Fark</color> and <color=cyan>Reaper Jester</color> can <color=red>no longer phase through some solid walls using their dash.</color> You'll have to work a bit harder " +
                 "if you want out of bounds.")},
-            {("Exploit Fixes:\nSfarx Stalling", "The exploit that lets Sfarx ignore the fall damage mechanic to skip Pacific Abyss and Final Utopia has been fixed. " +
+            {("Exploit Fixes:\nSfarx Stalling", "The exploit that lets <color=cyan>Sfarx</color> <color=red>ignore the fall damage mechanic</color> to skip Pacific Abyss and Final Utopia has been fixed. " +
                 "No skipping the meat of these levels anymore.")},
 
         };
 
         public static List<(string, string)> HintsList = new List<(string, string)>()
         {
-            {("Alpine Carrera:\nSpeed", "Maximize the utility of your boost meter by " +
-                "repeatedly quickly tapping the boost button instead of holding it. Try to space your taps so you just barely use all of it up, " +
+            {("Alpine Carrera:\nSpeed", "Maximize the utility of your <color=yellow>boost meter</color> by " +
+                "<color=green>repeatedly quickly tapping the boost button</color> instead of holding it. Try to <color=green>space your taps</color> so you <color=green>just barely use all of it up,</color> " +
                 "and save it when there's a boost pad.") },
 
-            {("Lost Ravine:\nSpeed", "It's actually possible to skip the fights on this level. Figuring out how to is critical for beating the speed medal targets. " +
-                "For a hint - closed doors are not always impassable.") },
+            {("Lost Ravine:\nSpeed", "It's actually possible to <color=green>skip the fights</color> on this level. Figuring out how to is <color=red>critical</color> for beating the speed medal targets. " +
+                "For a hint - <color=yellow>closed doors are not always impassable.</color>") },
         };
         public static GameObject GetTipsMenu(ShopaloShop shopBase)
         {
