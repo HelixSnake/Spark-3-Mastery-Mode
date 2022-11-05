@@ -28,8 +28,8 @@ namespace Spark3MasteryMode
     {
         public static List<(string, string)> TipsList = new List<(string, string)>()
         {
-            {("Changes:\nEnemies", "Enemies have not only been given more health and armor, but made more aggressive. Health and armor levels are " +
-                "about 3 times what they are in Hardcore.") },
+            {("Changes:\nEnemies", "Enemies have not only been given <color=red>more health and armor</color>, but made <color=red>more aggressive</color>. Health and armor levels are " +
+                "about <color=red>3</color> times what they are in Hardcore.") },
             {("Changes:\nDifficulty", "While you have as much health as on Hardcore difficulty, your parry timing is that of Challenge Jester. " +
                 "Make sure you learn to time it well, and be careful of the cooldown after releasing block!") },
             {("Changes:\nStatic Mode", "Static mode now drains half of your energy on use, to prevent using it to heal and then switching to not lose " +
@@ -47,9 +47,7 @@ namespace Spark3MasteryMode
             {("Combat Hint:\nJuggling", "After you break a boss's armor, the amount of time they stay open is proportionate to the amount of time they " +
                 "spend on the ground. Make sure to keep your juggle going as long as possible while they're open. Remember, Spark can land during juggles, " +
                 "and get his jump / dashes back.")},
-            {("Combat Hint:\nHyper Surge", "Hyper Surge is going to be your biggest time saver on stages with combat. Make sure to make good use of this. " +
-                "For score medals, you can make use of energy gained elsewhere, quickly build a combo to around 60-70%, and then use this to take " +
-                "tough enemies out quickly for lots of points.")},
+            {("Combat Hint:\nHyper Surge", "Hyper Surge is going to be your biggest time saver on stages with combat. Make sure to make good use of this.")},
             {("Combat Hint:\nCharged Kick", "Charged Kick does a suprising amount of damage with a full combo. "+
                 "Getting into position and charging it is a good thing to do in between enemy waves or Throwback's boss transitions.")},
             {("Combat Hint:\nScary Face", "Float may be limited in combat, but her Scary Face passive does a lot of free damage even when not " +
@@ -112,11 +110,19 @@ namespace Spark3MasteryMode
             {("Score Hint:\nCheckpoints", "Checkpoints give you a TON of score and much more multiplier than green capsules. " +
                 "It's worth going out of your way to get them!")},
             {("Score Hint:\nWeak Enemies", "If there's a route with a lot of weak enemies and bit bubbles you can homing attack through really quickly, it can be worth it to do so, " +
-                "especially early on in the run. Doing so will get your mulplier up significantly.")},
-
+                "especially early on in the run. Doing so will get your multiplier up significantly.")},
+            {("Score Hint:\nStrong Enemies", "A fast way to take out the biped robots is to use energy built elsewhere, and then get a lot of combo on really quickly with multihits like Spark, Fark and Sfarx's heavy air combo, " +
+                "along with Sfark's charge shot. Once your combo is about 3/4ths full, use Hyper Surge to kill them quickly along with any other nearby enemies.")},
+            {("Score Hint:\nWeigh Time\nVs Opportunity", "When you're deciding what to go for during score runs, always ask yourself how much time something takes versus how much you have to gain. " +
+                "Do I have to slow down too much to get this, or go too far out of my way? Can I break a lot of things here very quickly? Don't waste too much time breaking every little thing if they're not worth it.")},
+            {("Score Hint:\nMeasuring Score", "When you are prioritizing what to break, kill or collect, make sure to pay attention to the thing's actual worth in comparison to each other. You may find some things are more or less " +
+                "worth breaking than you thought. Remember that things scale with your multiplier, so break different things while the multiplier is about the same to see how they compare.")},
+            {("Score Hint:\nMath", "If you feel like actually doing math, the actual score worth of something is the amount of points gained divided by (multiplier + 1).")},
+            {("Score Hint:\nBreaking Stuff\nFaster", "You can break cargo containers while attacking on top of them with Spark, Fark, and Sfarx. Use heavy attack combos to break them. Concrete boxes give much more score than wooden ones and can be broken in a single heavy attack. " +
+                "Make good use of Hyper Surge as a way to destroy lots of tough breakables quickly; it's a good use of all the energy you build in score runs.")},
 
             {("Exploit Fixes:\nDash Phasing", "Fark and Reaper Jester can no longer phase through some solid walls using their dash. You'll have to work a bit harder " +
-                "if you want out of bounds")},
+                "if you want out of bounds.")},
             {("Exploit Fixes:\nSfarx Stalling", "The exploit that lets Sfarx ignore the fall damage mechanic to skip Pacific Abyss and Final Utopia has been fixed. " +
                 "No skipping the meat of these levels anymore.")},
 
@@ -155,7 +161,9 @@ namespace Spark3MasteryMode
         private static void Prefix(ShopaloShop __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
-            { 
+            {
+                __instance.WriteFrequency = 2000;
+                __instance.MenuMoveSpeed = 2000;
                 RectTransform controlsTip = __instance.transform.GetChild(2).GetComponent<RectTransform>();
                 Vector2 controlsPos = controlsTip.anchoredPosition;
                 controlsPos.y = -165;
@@ -344,15 +352,15 @@ namespace Spark3MasteryMode
     class InformationMenuSwitchPage
     {
         public static void ActivatePage(ShopaloShop __instance, GameObject Page)
-	    {
-		    ShopItenDetails component = Page.GetComponent<ShopItenDetails>();
-		    if (component != null)
-		    {
+        {
+            ShopItenDetails component = Page.GetComponent<ShopItenDetails>();
+            if (component != null)
+            {
                 __instance.StartTextBox(component.Description);
             }
             Page.SetActive(true);
-	    }
-        public static void SetPivots(ref ShopItenDetails[] ___CurrentItens, ref Transform[] ___CurrentPivots,  ShopItenDetails[] itens)
+        }
+        public static void SetPivots(ref ShopItenDetails[] ___CurrentItens, ref Transform[] ___CurrentPivots, ShopItenDetails[] itens)
         {
             ___CurrentItens = itens;
             ___CurrentPivots = new Transform[itens.Length];
@@ -393,6 +401,62 @@ namespace Spark3MasteryMode
                     ActivatePage(__instance, hintsPage);
                     SetPivots(ref ___CurrentItens, ref ___CurrentPivots, itemsList);
                 }
+            }
+        }
+
+        [HarmonyPatch(typeof(ShopaloShop))]
+        [HarmonyPatch("WriteShopaloBox")]
+        class MakeRichTextWork
+        {
+            private static bool Prefix(ShopaloShop __instance, ref bool ___DoneWritting, ref float ___dCount, ref float ___FreqCounter,
+                ref int ___charindex, ref string ___ToWrite, ref string ___t)
+            {
+                if (MasteryMod.DifficultyIsMastery())
+                {
+                    if (!___DoneWritting)
+                    {
+                        ___dCount += Time.fixedDeltaTime;
+                        if (___dCount > __instance.DialogSoundInterval)
+                        {
+                            __instance.DialogSound.Play();
+                            __instance.DialogSound.pitch = UnityEngine.Random.Range(__instance.DialogSoundPitchRange.x, __instance.DialogSoundPitchRange.y);
+                            ___dCount = 0f;
+                        }
+                        ___FreqCounter += Time.fixedDeltaTime * __instance.WriteFrequency;
+                        if (___FreqCounter >= 1f)
+                        {
+                            ___FreqCounter = 0f;
+                            int num = 0;
+                            int insideFormattedState = 0;
+                            while ((num < __instance.CharactersPerFrame || insideFormattedState != 0) && ___charindex < ___ToWrite.Length)
+                            {
+                                if (___ToWrite.Substring(___charindex) != null)
+                                {
+                                    string substr = ___ToWrite.Substring(___charindex, 1);
+                                    ___t += substr;
+                                    if (insideFormattedState == 0 && substr == "<") insideFormattedState = 1;
+                                    else if (insideFormattedState == 1 && substr == ">") insideFormattedState = 2;
+                                    else if (insideFormattedState == 2 && substr == "<") insideFormattedState = 3;
+                                    else if (insideFormattedState == 3 && substr == "/") insideFormattedState = 4;
+                                    else if (insideFormattedState == 4 && substr == ">") insideFormattedState = 0;
+                                    ___charindex++;
+                                    __instance.TextBox.text = ___t;
+                                }
+                                else
+                                {
+                                    ___DoneWritting = true;
+                                }
+                                num++;
+                            }
+                            if (___charindex >= ___ToWrite.Length)
+                            {
+                                ___DoneWritting = true;
+                            }
+                        }
+                    }
+                    return false;
+                }
+                return true;
             }
         }
     }

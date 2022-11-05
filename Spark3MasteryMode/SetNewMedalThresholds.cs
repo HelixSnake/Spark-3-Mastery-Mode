@@ -125,7 +125,6 @@ namespace Spark3MasteryMode
                 Save.SpeedGoldTargets[102] = 48f;
                 Save.SpeedDiaTargets[102] = 45f;
 
-                /*
                 // lost riviera
                 Save.SpeedGoldTargets[5] = 180f;
                 Save.SpeedDiaTargets[5] = 160f;
@@ -135,6 +134,8 @@ namespace Spark3MasteryMode
                 // lost ravine
                 Save.SpeedGoldTargets[6] = 130f;
                 Save.SpeedDiaTargets[6] = 107f;
+                Save.ScoreGoldTargets[6] = 250000f;
+                Save.ScoreDiaTargets[6] = 325000f;
 
                 // canyon zero
                 Save.ScoreGoldTargets[7] = 700000;
@@ -162,7 +163,6 @@ namespace Spark3MasteryMode
                 // wall running
                 Save.SpeedGoldTargets[105] = 33f;
                 Save.SpeedDiaTargets[105] = 29f;
-                */
             }
         }
     }
