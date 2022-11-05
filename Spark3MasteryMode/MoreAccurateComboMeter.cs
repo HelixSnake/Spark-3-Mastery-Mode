@@ -13,6 +13,7 @@ namespace Spark3MasteryMode
     [HarmonyPatch("ComboManager")]
     class MoreAccurateComboMeter
     {
+        private static float ang = 0;
         private static void Postfix(PlayerHealthAndStats __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
@@ -64,6 +65,9 @@ namespace Spark3MasteryMode
                         decimal actualComboMult = actualComboMultXTen / 10.0m;
                         comboText.text = string.Format("x{0:0.0}\nDMG", actualComboMult);
                         comboMultiplierTextShadow.GetComponent<Text>().text = comboText.text;
+                        ang += 2;
+                        comboMultiplierTextShadow.GetComponent<RectTransform>().anchoredPosition = comboMultiplierText.GetComponent<RectTransform>().anchoredPosition = 
+                            new Vector2(Mathf.Cos(ang), Mathf.Sin(ang)) * actualComboMultXTen * 0.03f;
                     }
                 }
             }

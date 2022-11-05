@@ -66,6 +66,7 @@ Release 0.3.0 [Pending]
 + Fixed bug where Fark and Reaper Jester could dash through certain barriers
 + Moved tips and hints to 2 unique menus in Shopalo's shop
 & Fixed bug that caused bosses to not behave correctly - some attacks bosses were canceling should now work properly
++ New, more accurate combo meter multiplier UI
 
 The following stages have new speed targets:
 Lost Riviera
