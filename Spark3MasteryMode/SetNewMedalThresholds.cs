@@ -18,11 +18,22 @@ namespace Spark3MasteryMode
             {
                 if (__instance.ID >= 0)
                 {
-                    __instance.HasSpeedMedals = true;
-                    if (LevelsWithScoreMedalsAdded.Contains(__instance.ID))
+                    if (Save.SpeedDiaTargets[__instance.ID] > 0)
+                    {
+                        __instance.HasSpeedMedals = true;
+                    }
+                    else
+                    {
+                        __instance.HasSpeedMedals = false;
+                    }
+                    if (Save.ScoreDiaTargets[__instance.ID] < 1000000000000000000f)
                     {
                         __instance.HasScoreMedals = true;
-                    }    
+                    }
+                    else
+                    {
+                        __instance.HasScoreMedals = false;
+                    }
                 }
             }
         }
@@ -35,10 +46,21 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                __instance.NoTimeMedal = false;
-                if (AddMedalsToLevels.LevelsWithScoreMedalsAdded.Contains(Save.CurrentStageIndex))
+                if (Save.SpeedDiaTargets[__instance.StageIndex] > 0)
+                {
+                    __instance.NoTimeMedal = false;
+                }
+                else
+                {
+                    __instance.NoTimeMedal = true;
+                }
+                if (Save.ScoreDiaTargets[__instance.StageIndex] < 1000000000000000000f)
                 {
                     __instance.NoScoreMedal = false;
+                }
+                else
+                {
+                    __instance.NoScoreMedal = true;
                 }
             }
         }
@@ -86,11 +108,11 @@ namespace Spark3MasteryMode
                 }
                 for (int i = 0; i < Save.ScoreGoldTargets.Length; i++)
                 {
-                    Save.ScoreGoldTargets[i] = 1000000000000000000;
+                    Save.ScoreGoldTargets[i] = 1000000000000000000f;
                 }
                 for (int i = 0; i < Save.ScoreDiaTargets.Length; i++)
                 {
-                    Save.ScoreDiaTargets[i] = 1000000000000000000;
+                    Save.ScoreDiaTargets[i] = 1000000000000000000f;
                 }
                 
                 // alpine carrera
@@ -127,7 +149,7 @@ namespace Spark3MasteryMode
 
                 // lost riviera
                 Save.SpeedGoldTargets[5] = 180f;
-                Save.SpeedDiaTargets[5] = 160f;
+                Save.SpeedDiaTargets[5] = 165f;
                 Save.ScoreGoldTargets[5] = 350000f;
                 Save.ScoreDiaTargets[5] = 425000f;
 

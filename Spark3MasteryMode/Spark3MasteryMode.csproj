@@ -94,6 +94,7 @@
     <Compile Include="DisableForcedCharacter.cs" />
     <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="FixDashOOB.cs" />
+    <Compile Include="FixPulley.cs" />
     <Compile Include="MakeChallengeParry.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />

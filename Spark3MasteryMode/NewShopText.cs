@@ -48,6 +48,8 @@ namespace Spark3MasteryMode
             {("Combat Hint:\nJuggling", "After you break a <color=red>boss's armor,</color> the amount of time they stay open is proportionate to the amount of time they " +
                 "spend <color=red>on the ground.</color> Make sure to <color=green>keep your juggle going as long as possible</color> while they're open. Remember, Spark can land during juggles, " +
                 "and get his <color=cyan>jump / dashes</color> back.")},
+            {("Combat Hint:\nHeavy Attacks", "<color=yellow>Heavy Attack Combos</color> do <color=green>more DPS</color> than Light Attack Combos. If you're having trouble hitting the diamond speed medals for combat stages, try getting in the habit of <color=green>using Heavy Attack combos more often.</color> " +
+                "A notable light attack combo that is still very useful is <color=orange>Fark's grounded light attack combo</color> (see the <color=cyan>'Storing Attacks'</color> tip)")},
             {("Combat Hint:\nHyper Surge", "<color=yellow>Hyper Surge</color> is going to be your biggest time saver on stages with combat. Make sure to make good use of this.")},
             {("Combat Hint:\nCharged Kick", "<color=yellow>Charged Kick</color> does a suprising amount of <color=green>damage</color> with a full <color=orange>combo meter.</color> "+
                 "Getting into position and <color=yellow>charging it</color> is a good thing to do in between enemy waves or Throwback's boss transitions.")},
@@ -61,6 +63,9 @@ namespace Spark3MasteryMode
                 "the hitbox will <color=yellow>reactivate,</color> and you can attack while it is active, increasing your DPS.")},
             {("Combat Hint:\nDash I-Frames", "<color=orange>Fark's dash</color> has <color=orange>considerably more i-frames</color> than it looks. Even for big, <color=red>long lasting AOE attacks,</color> " +
                 "Fark can use <color=orange>multiple dashes</color> to <color=green>avoid damage</color> completely without having to back off.")},
+            {("Combat Hint:\nHigher\nDouble Jump", "If you <color=cyan>air dash and then immediately jump,</color> you will get the <color=green>amount of height from your grounded jump</color> instead of your double jump. " +
+                "Use this to more effectively <color=green>continue the combo</color> against enemies you've air launched with <color=orange>Fark</color> or <color=cyan>Sfarx.</color>")},
+            {("Combat Hint:\nDash Cancel", "Almost <color=green>any action</color> can be canceled into a <color=cyan>dash or air dash.</color> Use it to cancel the <color=red>end lag</color> from various actions from parries to attacks.")},
             {("Combat Hint:\nSkipping Combat", "While getting good at combat is useful, you also want to <color=green>skip combat arenas</color> as much as possible. " +
                 "A lot of arenas can have their activation box <color=green>maneuvered around,</color> and some can be <color=green>escaped after activating.</color> " +
                 "Remember that <color=yellow>jester swipes</color>  and <color=cyan>homing attacks</color> can <color=green>take you through walls!</color> ")},
@@ -97,7 +102,7 @@ namespace Spark3MasteryMode
             {("Traversal Hint:\nSlope Jumping", "Using a <color=yellow>charged jester dash</color> on a slope and then <color=cyan>immediately jumping</color> can get you a <color=green>lot of height</color> with no runway - if you're having trouble " +
                 "angling your <color=yellow>charged jester dash</color> up the slope, <color=green>angle it to the side first to 'ease' your character into aiming up the slope.</color>")},
             {("Traversal Hint:\nRamp Jumping", "Using a <color=yellow>charged jester dash</color> before a <color=grey>conveyer ramp</color> can be a REALLY good tool for <color=green>gaining a lot of height and distance.</color> Make sure to time " +
-                "the jump <color=grey>while you're on the ramp.</color> The <color=green>faster</color> you're going before hand, the <color=green>more height you'll get.</color>")},
+                "the jump <color=grey>near the end, but not after the end of the ramp</color> for the most height. The <color=green>faster</color> you're going before hand, the <color=green>more height you'll get.</color>")},
             {("Traversal Hint:\nStatic Mode", "<color=orange>Fark</color> actually gets a <color=cyan>boost to jump force</color> from <color=cyan>static mode,</color> as well as <color=green>quicker acceleration</color> - if you have a short runway for a <color=cyan>slope jump</color> " +
                 "and can get enough <color=cyan>energy,</color> you might want to use <color=cyan>static mode</color> to get that <color=green>extra height or distance.</color>")},
             {("Traversal Hint:\nAir Movement", "A general rule of thumb for <color=green>climbing and making large gaps</color> - you will often want to start as <color=purple>Float</color> to make most use of her <color=purple>hover ability,</color> " +
@@ -105,6 +110,8 @@ namespace Spark3MasteryMode
                 "for that <color=green>extra height</color> before using <color=orange>Fark.</color>")},
             {("Traversal Hint:\nBig Jumps", "If you have a way to get a <color=green>tremendous amount of speed,</color> you might need all that speed to get a <color=cyan>slope jump</color> high enough to reach some " +
                 "locations. Keep an eye out for opportunities to go <color=green>really fast right before a slope, or an upwards slant in a rail</color> that can be jumped to get a <color=green>huge amount of height.</color>")},
+            {("Traversal Hint:\nHigher\nDouble Jump", "If you <color=cyan>air dash and then immediately jump,</color> you will get the <color=green>amount of height from your grounded jump</color> instead of your double jump. " +
+                "While you'll use up the air dash you could have used for a wall jump, this can be situationally useful for traversal. <color=cyan>Fark's static mode</color> has a very <color=green>high double jump,</color> and can get a <color=green>LOT of extra height</color> this way.")},
 
             {("Score Hint:\nGeneral Advice", "While you're routing for <color=magenta>score,</color> pay attention to <color=magenta>which objects actually add the most score, or the most multiplier,</color> " +
                 "and plan your route based on that. The <color=red>biped robots</color> give a ton of <color=magenta>score,</color> as do <color=green>green capsules.</color> Green capsules don't give you that much multiplier though, keep that in mind.")},
@@ -137,6 +144,12 @@ namespace Spark3MasteryMode
 
             {("Lost Ravine:\nSpeed", "It's actually possible to <color=green>skip the fights</color> on this level. Figuring out how to is <color=red>critical</color> for beating the speed medal targets. " +
                 "For a hint - <color=yellow>closed doors are not always impassable.</color>") },
+
+            {("High Rise Tracks:\nSpeed", "On the first set of <color=grey>conveyer ramps,</color> take the <color=green>rightmost ramp</color> and <color=yellow>jester swipe</color> the <color=yellow>rightmost line of bits,</color> you will ride the side of the ramp and <color=green>keep from losing speed.</color> " +
+                "On the other ramps, <color=cyan>jump</color> before you hit them to more reliably <color=green>maintain your speed</color> and keep from losing it.") },
+            
+            {("Lost Riviera:\nSpeed", "The way you start this level is <color=red>EXTREMELY IMPORTANT</color> as it determines how much <color=cyan>momentum</color> you'll have for the segments after, and whether you'll reach the <color=cyan>energy gain threshold</color> (see the three <color=cyan>'rail braking'</color> tips). " +
+                "Start by jumping and getting the <color=cyan>blue bit bubble</color> on the left, then find a route that lets you <color=green>rail jump to near the end of the</color> <color=red>leftmost</color> <color=green>off rails segment</color> with around <color=cyan>half your energy bar full.</color>") },
         };
         public static GameObject GetTipsMenu(ShopaloShop shopBase)
         {

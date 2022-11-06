@@ -67,6 +67,9 @@ Release 0.3.0 [Pending]
 + Moved tips and hints to 2 unique menus in Shopalo's shop
 & Fixed bug that caused bosses to not behave correctly - some attacks bosses were canceling should now work properly
 + New, more accurate combo meter multiplier UI
+& Fixed bug where score medals on some stages did not work correctly
++ Fixed bug where hitting a pulley above it max speed sets you to its min speed
++ Made it so "unreachable" score and speed medals don't show up on the menus
 
 The following stages have new speed targets:
 Lost Riviera
