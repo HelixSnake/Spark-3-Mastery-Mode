@@ -58,7 +58,7 @@ High Rise Tracks
 The following stages have some exploration medals moved:
 Doublemoon Villa
 
-Release 0.3.0 [Pending]
+Release 0.3.0
 + Split Final Utopia into 4 separate levels (1 stage, 3 boss fights) that are treated like normal levels, with a best time saved for each (no medals yet).
 	Unlocked after beating the "normal" Final Utopia.
 & Fixed a bug where Motorhead enemies would not die in one uncharged Charge Blast shot from Spark
