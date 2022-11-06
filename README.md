@@ -1,9 +1,9 @@
 # Spark-3-Mastery-Mode  
 Mode that makes enemies tougher and meaner, along with other changes.  
 
-2.0 is OUT! There are now hints for better play in the Shopalo item descriptions, and new medals for all the levels up to Saw Man.  
+0.3.0 is OUT! There is now a better hint menu, magnet dashes have been rebalanced, after beating Final Utopia the individual segments unlock as levels, and there are new medals for all the levels in Areas 1 and 2.  
 
-All medal targets are set without using magnet dashing. If you want to get the full challenge out of the new targets, don't use magnet dash (the trick where you dash after a homing attack for a huge boost of speed). Make good use of the other tools you have to gain speed.  
+Magnet dashes are now allowed because they've been made less powerful but more consistent.
 
 Features: check changelog.txt  
 Requires Melonloader 5.4  
