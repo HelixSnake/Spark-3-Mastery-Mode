@@ -150,6 +150,10 @@ namespace Spark3MasteryMode
             
             {("Lost Riviera:\nSpeed", "The way you start this level is <color=red>EXTREMELY IMPORTANT</color> as it determines how much <color=cyan>momentum</color> you'll have for the segments after, and whether you'll reach the <color=cyan>energy gain threshold</color> (see the three <color=cyan>'rail braking'</color> tips). " +
                 "Start by jumping and getting the <color=cyan>blue bit bubble</color> on the left, then find a route that lets you <color=green>rail jump to near the end of the</color> <color=red>leftmost</color> <color=green>off rails segment</color> with around <color=cyan>half your energy bar full.</color>") },
+        
+            {("District 5:\nSpeed", "After you land in the water, take the middle route to the conveyer ramp and jump high to the left; when you get to the 2 lines of bits, charge a jester dash and then, timed so you won't hit the fire, jester swipe the right line of bits. This route can save you an incredible amount of time.") },
+
+            {("Throwback:\nCombat", "Double's <color=yellow>delayed vertical flash</color> move can actually be <color=yellow>blocked</color> and <color=cyan>parried.</color> This knowledge is critical if you want to keep up the aggression.") },
         };
         public static GameObject GetTipsMenu(ShopaloShop shopBase)
         {

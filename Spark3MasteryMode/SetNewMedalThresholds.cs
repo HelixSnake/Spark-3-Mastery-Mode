@@ -83,10 +83,33 @@ namespace Spark3MasteryMode
                     __instance.MedalsHolder.SetActive(true);
                     __instance.CollectathonMenu.SetActive(false);
                 }
+                if (__state && ___StageData != null)
+                {
+                    __instance.BestScoreObject.SetActive(true);
+                    __instance.BestTimeObject.SetActive(true);
+                }
             }
         }
     }
-    [HarmonyPatch(typeof(Save))]
+
+    [HarmonyPatch(typeof(StageConpleteControl))]
+    [HarmonyPatch("ModeObjects")]
+    class EnableBestSpeedAndScoreEndLevel
+    {
+        private static void Postfix(StageConpleteControl __instance)
+        {
+            for (int j = 0; j < __instance.SpeedObjects.Length; j++)
+            {
+                __instance.SpeedObjects[j].SetActive(true);
+            }
+            for (int k = 0; k < __instance.ScoreObjects.Length; k++)
+            {
+                __instance.ScoreObjects[k].SetActive(true);
+            }
+        }
+    }
+
+        [HarmonyPatch(typeof(Save))]
     [HarmonyPatch("Awake")]
     class SetNewMedalThresholds
     {
@@ -185,6 +208,13 @@ namespace Spark3MasteryMode
                 // wall running
                 Save.SpeedGoldTargets[105] = 33f;
                 Save.SpeedDiaTargets[105] = 29f;
+
+                // district 5
+
+                //Save.SpeedGoldTargets[8] = 215f;
+                //Save.SpeedDiaTargets[8] = 200f;
+
+
             }
         }
     }
