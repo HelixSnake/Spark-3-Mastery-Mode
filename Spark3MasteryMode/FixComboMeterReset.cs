@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
     [HarmonyPatch(typeof(SceneController))]
     [HarmonyPatch("ResetValues")]
@@ -13,7 +13,7 @@ namespace Spark3MasteryMode
     {
         private static void Postfix()
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 PlayerHealthAndStats.Combo = 0;
             }
@@ -26,7 +26,7 @@ namespace Spark3MasteryMode
     {
         private static void Postfix()
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 PlayerHealthAndStats.Combo = 0;
             }
@@ -38,7 +38,7 @@ namespace Spark3MasteryMode
     {
         private static void Postfix()
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 PlayerHealthAndStats.Combo = 0;
             }

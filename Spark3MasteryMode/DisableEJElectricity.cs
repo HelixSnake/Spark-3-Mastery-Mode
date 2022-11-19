@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
     [HarmonyPatch(typeof(HystoriaBossFight))]
     [HarmonyPatch("SetAllobjects")]
@@ -12,7 +12,7 @@ namespace Spark3MasteryMode
     {
         private static void Postfix(HystoriaBossFight __instance, ref int ___boss)
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 if (___boss != 0)
                 {

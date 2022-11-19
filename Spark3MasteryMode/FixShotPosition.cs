@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
 
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
 	[HarmonyPatch(typeof(Action10Control_Blast))]
 	[HarmonyPatch("CreateBlast")]
@@ -15,7 +15,7 @@ namespace Spark3MasteryMode
 
 		private static bool Prefix(bool big, Action10Control_Blast __instance, ref Vector3 ___EnemyDir)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (HelixFixMod.DifficultyIsNotMastery())
 			{
 				Vector3 enemyDir = ___EnemyDir;
 				enemyDir.y = 0f;

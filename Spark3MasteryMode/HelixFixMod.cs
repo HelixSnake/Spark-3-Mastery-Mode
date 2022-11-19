@@ -5,17 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
 
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
-    public class MasteryMod : MelonMod
+    public class HelixFixMod : MelonMod
     {
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
         }
-        public static bool DifficultyIsMastery()
+        public static bool DifficultyIsNotMastery()
         {
-            return Save.GetCurrentSave().CombatDificulty == 5;
+            return Save.GetCurrentSave().CombatDificulty != 5;
         }
     }
 }

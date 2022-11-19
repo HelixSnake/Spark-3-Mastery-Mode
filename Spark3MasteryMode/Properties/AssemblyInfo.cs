@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
-using Spark3MasteryMode;
+using HelixBugFix;
 
-[assembly: MelonInfo(typeof(MasteryMod), "Mastery Mode", "0.3.1", "Helix Snake")]
+[assembly: MelonInfo(typeof(HelixFixMod), "HelixBugFixMod", "1.0.0", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Spark3MasteryMode")]
+[assembly: AssemblyTitle("HelixBugFixMod")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Spark3MasteryMode")]
+[assembly: AssemblyProduct("HelixBugFixMod")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

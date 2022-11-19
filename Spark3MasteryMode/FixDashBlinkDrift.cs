@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
 
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
     [HarmonyPatch(typeof(Action06_Dash))]
     [HarmonyPatch("FixedUpdate")]
@@ -15,7 +15,7 @@ namespace Spark3MasteryMode
         private static Vector3 storedInput;
         private static void Prefix(Action06_Dash __instance, ref PlayerBinput ___Inp)
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 storedInput = ___Inp.MoveInput;
                 ___Inp.MoveInput = Vector3.Normalize(__instance.MoveDir);
@@ -23,7 +23,7 @@ namespace Spark3MasteryMode
         }
         private static void Postfix(Action06_Dash __instance, ref PlayerBinput ___Inp)
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (HelixFixMod.DifficultyIsNotMastery())
             {
                 ___Inp.MoveInput = storedInput;
             }

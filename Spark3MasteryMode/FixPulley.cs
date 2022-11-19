@@ -7,7 +7,7 @@ using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
 
-namespace Spark3MasteryMode
+namespace HelixBugFix
 {
 	[HarmonyPatch(typeof(Pulley))]
 	[HarmonyPatch("OnTriggerEnter")]
@@ -16,7 +16,7 @@ namespace Spark3MasteryMode
 		private static bool Prefix(Collider col, Pulley __instance, ref bool ___Pull, ref ActionManager ___Action, ref float ___TruePullSpeed,
 			ref PlayerBhysics ___Player, ref bool ___KeepMoving, ref float ___PulleyTime)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (HelixFixMod.DifficultyIsNotMastery())
 			{
 				if (col.tag == "Player")
 				{
@@ -68,7 +68,7 @@ namespace Spark3MasteryMode
 		}
 		private static void Postfix(Pulley __instance, ref float ___PulleyPosition)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (HelixFixMod.DifficultyIsNotMastery())
 			{
 				if (___PulleyPosition < 0.01f)
 				{
