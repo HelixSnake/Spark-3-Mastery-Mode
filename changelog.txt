@@ -93,3 +93,10 @@ Lost Ravine
 Release 0.3.1
 + Made pulley pillars not have collision if the pulley is there, so you can't hit it and lose your speed
 & Fixed regression when removing unobtainable medals - all stages will now show both best score and time, and the current score and time will be shown after levels
+
+Release 0.3.2 [pending]
+& Fixed code failure from enum change
++ Un-nerfed Fark's static mode
++ Banned the 3 new DLC items in the shop
++ Fixed spark and sfarx's shots sometimes colliding with the ground when shooting upwards
++ Fixed Fark and Reaper Jester "drifting" when using blink when not holding down the analog stick

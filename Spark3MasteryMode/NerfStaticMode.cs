@@ -16,8 +16,7 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                PlayerHealthAndStats.Energy -= 50f;
-                Dificulty.EnergyGainMultiplier = 0;
+                Dificulty.EnergyGainMultiplier = 0.35f;
             }
         }
     }

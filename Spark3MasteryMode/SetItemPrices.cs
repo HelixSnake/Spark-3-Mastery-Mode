@@ -25,7 +25,7 @@ namespace Spark3MasteryMode
                 }
                 for (int i = 0; i < __instance.SpecialItens.Length; i++)
                 {
-                    if (i == 0 || i == 2 || i == 3)
+                    if (i == 0 || i == 2 || i == 3 || i == 7 || i == 8 || i == 9)
                         __instance.SpecialItens[i].BitsCost = int.MaxValue;
                     else
                         __instance.SpecialItens[i].BitsCost = 1;

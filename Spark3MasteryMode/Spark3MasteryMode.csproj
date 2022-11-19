@@ -93,8 +93,10 @@
     <Compile Include="DisableEJElectricity.cs" />
     <Compile Include="DisableForcedCharacter.cs" />
     <Compile Include="FixComboMeterReset.cs" />
+    <Compile Include="FixDashBlinkDrift.cs" />
     <Compile Include="FixDashOOB.cs" />
     <Compile Include="FixPulley.cs" />
+    <Compile Include="FixShotPosition.cs" />
     <Compile Include="MakeChallengeParry.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
@@ -106,7 +108,6 @@
     <Compile Include="PatchEnemyDamage.cs" />
     <Compile Include="PatchRaidTimeLimit.cs" />
     <Compile Include="PatchScoreTimeLimit.cs" />
-    <Compile Include="PatchSfarxExploit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LockPauseScreenDifficulty.cs" />
     <Compile Include="ReduceBlinkCost.cs" />

@@ -92,6 +92,8 @@ namespace Spark3MasteryMode
             {("Speed Hint:\nRail Swiping", "A very <color=cyan>quick jump</color> followed, with a small delay, by a <color=yellow>jester swipe</color> can be used to <color=green>gain speed on rails</color> when there is a <color=yellow>line of bits</color> - the swipe " +
                 "will often put you back on the rail with a <color=green>speed boost.</color> You should definitely make use of this when possible, since speed on rails is so important. <color=red>If this is inconsistent,</color> " +
                 "and you find yourself coming off the rail, <color=red>delay the jester swipe more.</color>")},
+            {("Speed Hint:\nCharged Jester\nSwipe", "If you encounter a <color=yellow>line of bits</color> while at low speed, it can be a good idea to do a <color=yellow>charged jester dash</color> before swiping them. Otherwise you're wasting the extra speed from those bits. " +
+                "Lines of bits that are right before a <color=red>moving hazard</color> are good to charge before, instead of relying on inconsistent timing.") },
             {("Speed Hint:\nFloat's Homing\nAttack", "In addition to <color=purple>Float's</color> platforming abilities, she also has a faster <color=cyan>homing attack</color> - <color=red>groups of enemies</color> that are " +
                 "close enough together can allow <color=purple>Float</color> to get through them <color=green>very quickly</color> by <color=green>mashing the homing attack button.</color> Since histun pauses the timer, dashing " +
                 "through enemies this way is <color=green>borderline instant.</color>") },

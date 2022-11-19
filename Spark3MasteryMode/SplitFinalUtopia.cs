@@ -219,7 +219,7 @@ namespace Spark3MasteryMode
             {
                 if (___MapMode && ___StageData != null)
                 {
-                    if (___StageData.LevelType == StageType.Shop)
+                    if (___StageData.LevelType == StageType.ShopOrMisc)
                     {
                         Save.LastStageStarted = ___StageData.ID; // nothing actually uses Save.LastStageStarted but we need this for certain levels to work correctly if visited after our new levels
                     }
