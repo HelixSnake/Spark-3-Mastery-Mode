@@ -1,12 +1,14 @@
 Helix Bug Fix Mod 1.0.0
 
 + Combo meter now resets on restart, checkpoint and death
-+ Combo meter multiplier has more accurate numbers
 + Fixed EJ spawning with electricity active in Throwback fight
 + Fixed bug where hitting a pulley above it max speed sets you to its min speed
 + Made pulley pillars not have collision if the pulley is there, so you can't hit it and lose your speed
 + Fixed spark and sfarx's shots sometimes colliding with the ground when shooting upwards
 + Fixed Fark and Reaper Jester "drifting" when using blink when not holding down the analog stick
-+ Best score and time now show regardless of whether there are medals
 
+Helix Bug Fix Mod 1.1.0 [pending]
+
++ Combo meter multiplier has more accurate numbers
++ Best score and time now show regardless of whether there are medals
 + Utopia Shelter now unlocks new stages (the contained stage and 3 boss fights) upon completion
