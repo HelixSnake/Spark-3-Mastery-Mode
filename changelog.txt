@@ -7,5 +7,6 @@ Helix Bug Fix Mod 1.0.0
 + Made pulley pillars not have collision if the pulley is there, so you can't hit it and lose your speed
 + Fixed spark and sfarx's shots sometimes colliding with the ground when shooting upwards
 + Fixed Fark and Reaper Jester "drifting" when using blink when not holding down the analog stick
++ Best score and time now show regardless of whether there are medals
 
 + Utopia Shelter now unlocks new stages (the contained stage and 3 boss fights) upon completion
