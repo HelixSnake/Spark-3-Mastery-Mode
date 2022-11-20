@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using HelixBugFix;
 
-[assembly: MelonInfo(typeof(HelixFixMod), "HelixBugFixMod", "1.0.0", "Helix Snake")]
+[assembly: MelonInfo(typeof(HelixFixMod), "HelixBugFixMod", "1.1.0 beta", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
