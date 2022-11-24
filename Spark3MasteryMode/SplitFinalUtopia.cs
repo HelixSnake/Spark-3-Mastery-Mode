@@ -201,9 +201,9 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                if (__instance.StagesToUnlock.Length == 2 && __instance.StagesToUnlock[0] == 54 && __instance.StagesToUnlock[1] == 55) // final cutscene
+                if (__instance.StagesToUnlock.Length == 3 && __instance.StagesToUnlock[0] == 54 && __instance.StagesToUnlock[1] == 55 && __instance.StagesToUnlock[2] == 141) // final cutscene
                 {
-                    __instance.StagesToUnlock = new int[] {54, 55, 90, 91, 92, 93 };
+                    __instance.StagesToUnlock = new int[] { 54, 55, 141, 90, 91, 92, 93 };
                 }
             }
         }

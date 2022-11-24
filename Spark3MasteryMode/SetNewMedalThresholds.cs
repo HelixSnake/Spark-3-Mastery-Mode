@@ -98,13 +98,16 @@ namespace Spark3MasteryMode
     {
         private static void Postfix(StageConpleteControl __instance)
         {
-            for (int j = 0; j < __instance.SpeedObjects.Length; j++)
+            if (MasteryMod.DifficultyIsMastery())
             {
-                __instance.SpeedObjects[j].SetActive(true);
-            }
-            for (int k = 0; k < __instance.ScoreObjects.Length; k++)
-            {
-                __instance.ScoreObjects[k].SetActive(true);
+                for (int j = 0; j < __instance.SpeedObjects.Length; j++)
+                {
+                    __instance.SpeedObjects[j].SetActive(true);
+                }
+                for (int k = 0; k < __instance.ScoreObjects.Length; k++)
+                {
+                    __instance.ScoreObjects[k].SetActive(true);
+                }
             }
         }
     }

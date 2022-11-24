@@ -100,3 +100,4 @@ Release 0.3.2 [pending]
 + Banned the 3 new DLC items in the shop
 + Fixed spark and sfarx's shots sometimes colliding with the ground when shooting upwards
 + Fixed Fark and Reaper Jester "drifting" when using blink when not holding down the analog stick
+& Fixed Split Utopia Shelter not unlocking after new update
