@@ -5,17 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
 
-namespace Spark3MasteryMode
+namespace MoreAggressivePostProcessing
 {
-    public class MasteryMod : MelonMod
+    public class MoreAggressivePostProcessingMod : MelonMod
     {
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
-        }
-        public static bool DifficultyIsMastery()
-        {
-            return Save.GetCurrentSave().CombatDificulty == 5;
         }
     }
 }
