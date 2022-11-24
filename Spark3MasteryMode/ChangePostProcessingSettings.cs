@@ -3,31 +3,71 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine.PostProcessing;
 using HarmonyLib;
+using Rewired;
 
 namespace MoreAggressivePostProcessing
 {
-    [HarmonyPatch(typeof(GraphicsMenu))]
+    [HarmonyPatch(typeof(LevelProgressControl))]
     [HarmonyPatch("Start")]
-    class ChangePostProcessingSettings
+    class GetPostProcessingSettings
     {
-        private static void Prefix(GraphicsMenu __instance)
+        public static BloomModel.Settings defaultBloomSettings;
+        public static ColorGradingModel.Settings defaultColorGradingSettings;
+        public static bool useNewSettings = false;
+        public static BloomModel.Settings newBloomSettings;
+        public static ColorGradingModel.Settings newColorGradingSettings;
+        private static void Postfix(LevelProgressControl __instance)
         {
-            var bloomSettings = __instance.Profile.bloom.settings;
-            bloomSettings.bloom.intensity = 0.3f;
-            bloomSettings.bloom.radius = 4;
-            bloomSettings.bloom.threshold = 1;
-            bloomSettings.bloom.softKnee = 1;
-            __instance.Profile.bloom.settings = bloomSettings;
+            if (__instance.Graphics.Profile.bloom.settings.bloom.threshold == 1) return; // don't copy changed settings
+            defaultBloomSettings = __instance.Graphics.Profile.bloom.settings;
+            newBloomSettings = defaultBloomSettings;
+            newBloomSettings.bloom.intensity = 0.2f;
+            newBloomSettings.bloom.radius = 4;
+            newBloomSettings.bloom.threshold = 1;
+            newBloomSettings.bloom.softKnee = 0.5f;
 
-            var colorGradingSettings = __instance.Profile.colorGrading.settings;
-            colorGradingSettings.tonemapping.tonemapper = UnityEngine.PostProcessing.ColorGradingModel.Tonemapper.Neutral;
-            colorGradingSettings.tonemapping.neutralBlackIn = 0.02f;
-            colorGradingSettings.tonemapping.neutralBlackOut = 0f;
-            colorGradingSettings.tonemapping.neutralWhiteIn = 8f;
-            colorGradingSettings.tonemapping.neutralWhiteOut = 8f;
-            colorGradingSettings.tonemapping.neutralWhiteLevel = 8f;
-            colorGradingSettings.tonemapping.neutralWhiteClip = 8f;
+            defaultColorGradingSettings = __instance.Graphics.Profile.colorGrading.settings;
+            newColorGradingSettings = defaultColorGradingSettings;
+            newColorGradingSettings.tonemapping.tonemapper = UnityEngine.PostProcessing.ColorGradingModel.Tonemapper.Neutral;
+            newColorGradingSettings.tonemapping.neutralBlackIn = 0.05f;
+            newColorGradingSettings.tonemapping.neutralBlackOut = 0f;
+            newColorGradingSettings.tonemapping.neutralWhiteIn = 10f;
+            newColorGradingSettings.tonemapping.neutralWhiteOut = 10f;
+            newColorGradingSettings.tonemapping.neutralWhiteLevel = 5f;
+            newColorGradingSettings.tonemapping.neutralWhiteClip = 6f;
+
+            useNewSettings = true;
+            __instance.Graphics.Profile.bloom.settings = newBloomSettings;
+            __instance.Graphics.Profile.colorGrading.settings = newColorGradingSettings;
+            __instance.Graphics.Profile.colorGrading.OnValidate();
+
+        }
+    }
+    [HarmonyPatch(typeof(LevelProgressControl))]
+    [HarmonyPatch("Update")]
+    class TogglePostProcessingSettings
+    {
+        private static void Postfix(LevelProgressControl __instance)
+        {
+            var inp = ReInput.players.GetPlayer(0);
+            if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.F11))
+            {
+                GetPostProcessingSettings.useNewSettings = !GetPostProcessingSettings.useNewSettings;
+                if (GetPostProcessingSettings.useNewSettings)
+                {
+                    __instance.Graphics.Profile.bloom.settings = GetPostProcessingSettings.newBloomSettings;
+                    __instance.Graphics.Profile.colorGrading.settings = GetPostProcessingSettings.newColorGradingSettings;
+                    __instance.Graphics.Profile.colorGrading.OnValidate();
+                }
+                else
+                {
+                    __instance.Graphics.Profile.bloom.settings = GetPostProcessingSettings.defaultBloomSettings;
+                    __instance.Graphics.Profile.colorGrading.settings = GetPostProcessingSettings.defaultColorGradingSettings;
+                    __instance.Graphics.Profile.colorGrading.OnValidate();
+                }
+            }
         }
     }
 }
