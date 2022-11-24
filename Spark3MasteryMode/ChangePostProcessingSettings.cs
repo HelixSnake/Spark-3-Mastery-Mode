@@ -20,12 +20,12 @@ namespace MoreAggressivePostProcessing
         public static ColorGradingModel.Settings newColorGradingSettings;
         private static void Postfix(LevelProgressControl __instance)
         {
-            if (__instance.Graphics.Profile.bloom.settings.bloom.threshold == 1) return; // don't copy changed settings
+            if (__instance.Graphics.Profile.bloom.settings.bloom.threshold == 0.5f) return; // don't copy changed settings
             defaultBloomSettings = __instance.Graphics.Profile.bloom.settings;
             newBloomSettings = defaultBloomSettings;
-            newBloomSettings.bloom.intensity = 0.2f;
+            newBloomSettings.bloom.intensity = 0.1f;
             newBloomSettings.bloom.radius = 4;
-            newBloomSettings.bloom.threshold = 1;
+            newBloomSettings.bloom.threshold = 0.5f;
             newBloomSettings.bloom.softKnee = 0.5f;
 
             defaultColorGradingSettings = __instance.Graphics.Profile.colorGrading.settings;
