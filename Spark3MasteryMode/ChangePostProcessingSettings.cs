@@ -54,12 +54,18 @@ namespace MoreAggressivePostProcessing
 
             {26, 1f},
             {50, 1f},
+            {52, 1.5f},
 
             {141, 0.8f},
             {143, 0.8f},
             {144, 0.8f},
             {145, 1.5f},
             {150, 0.8f},
+
+            // split Final Utopia
+            
+            {91, 1f},
+            {93, 1.5f},
         };
         public static void SetSettings()
         {
