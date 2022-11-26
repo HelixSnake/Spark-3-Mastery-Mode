@@ -95,6 +95,7 @@
     <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="FixDashBlinkDrift.cs" />
     <Compile Include="FixDashOOB.cs" />
+    <Compile Include="FixHystoriaBossFightSoftLock.cs" />
     <Compile Include="FixPulley.cs" />
     <Compile Include="FixShotPosition.cs" />
     <Compile Include="MakeChallengeParry.cs" />
