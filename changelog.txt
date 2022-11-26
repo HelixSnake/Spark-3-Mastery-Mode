@@ -94,7 +94,7 @@ Release 0.3.1
 + Made pulley pillars not have collision if the pulley is there, so you can't hit it and lose your speed
 & Fixed regression when removing unobtainable medals - all stages will now show both best score and time, and the current score and time will be shown after levels
 
-Release 0.3.2 [pending]
+Release 0.3.2
 & Fixed code failure from enum change
 + Un-nerfed Fark's static mode
 + Banned the 3 new DLC items in the shop
