@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FixHystoriaBossSoftLock.cs" />
     <Compile Include="MoreAccurateComboMeter.cs" />
     <Compile Include="DisableEJElectricity.cs" />
     <Compile Include="FixComboMeterReset.cs" />

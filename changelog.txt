@@ -12,3 +12,4 @@ Helix Bug Fix Mod 1.1.0 [pending]
 + Combo meter multiplier has more accurate numbers
 + Best score and time now show regardless of whether there are medals
 + Utopia Shelter now unlocks new stages (the contained stage and 3 boss fights) upon completion
++ Softlock in Throwback boss fight from Double -> RYNO defeat order is fixed
