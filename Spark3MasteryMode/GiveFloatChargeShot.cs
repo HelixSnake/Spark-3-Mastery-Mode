@@ -73,7 +73,7 @@ namespace Spark3MasteryMode
 							__instance.Actions.Action01.DoDoubleJump();
 						}
 					}
-						if (HomingAttackControl.TargetObject != null)
+					if (HomingAttackControl.TargetObject != null)
 					{
 						if (___Counter < __instance.ActionDuration)
 						{
@@ -89,6 +89,23 @@ namespace Spark3MasteryMode
 						}
 					}
 				}
+			}
+		}
+	}
+	[HarmonyPatch(typeof(Action10Control_Blast))]
+	[HarmonyPatch("Start")]
+	class GiveFloatChargeShotGlow
+	{
+		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
+		{
+			Transform accessories = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("Float_Acessories");
+			if (accessories != null)
+            {
+				var accessoriesRenderer = accessories.GetComponent<SkinnedMeshRenderer>();
+				SkinnedMeshRenderer[] newArray = new SkinnedMeshRenderer[__instance.PlayerModel.Length + 1];
+				__instance.PlayerModel.CopyTo(newArray, 0);
+				newArray[__instance.PlayerModel.Length] = accessoriesRenderer;
+				__instance.PlayerModel = newArray;
 			}
 		}
 	}
