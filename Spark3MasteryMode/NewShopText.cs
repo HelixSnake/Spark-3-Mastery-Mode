@@ -32,9 +32,8 @@ namespace Spark3MasteryMode
                 "about <color=red>3</color> times what they are in Hardcore.") },
             {("Changes:\nDifficulty", "While you have as much health as on <color=red>Hardcore difficulty</color>, your <color=red>parry timing</color> is that of <color=red>Challenge Jester.</color> " +
                 "Make sure you learn to time it well, and be careful of the <color=red>cooldown</color> after releasing block!") },
-            {("Changes:\nStatic Mode", "<color=cyan>Static mode</color> now <color=red>drains half of your energy</color> on use, to prevent using it to heal and then switching to not lose " +
-                "energy. You also <color=red>can't gain energy</color> while it's active, but it <color=green>drains less slowly.</color> It is still situationally useful and a good way of " +
-                "getting back health regardless.") },
+            {("Changes:\nStatic Mode", "<color=cyan>Static mode</color> now <color=red>gains less energy</color> while it's active, to prevent it from lasting too long.")},
+            {("Changes:\nFloat's Charge\nShot", "<color=Violet>Float</color> now has a <color=Green>charge shot.</color> Experiment with it!")},
             {("Changes:\nBlink", "Your teleport special power, <color=magenta>Blink</color>, now takes <color=green>15 energy instead of 25.</color> In some fights you might want to make good " +
                 "use of it to <color=magenta>keep up your juggle,</color> since you might not be able to keep the aggression up as well when the enemy is attacking!") },
             {("Changes:\nMagnet Dash", "A <color=cyan>Magnet Dash</color> is a dash right after a <color=cyan>homing attack. " +
@@ -66,6 +65,7 @@ namespace Spark3MasteryMode
             {("Combat Hint:\nHigher\nDouble Jump", "If you <color=cyan>air dash and then immediately jump,</color> you will get the <color=green>amount of height from your grounded jump</color> instead of your double jump. " +
                 "Use this to more effectively <color=green>continue the combo</color> against enemies you've air launched with <color=orange>Fark</color> or <color=cyan>Sfarx.</color>")},
             {("Combat Hint:\nDash Cancel", "Almost <color=green>any action</color> can be canceled into a <color=cyan>dash or air dash.</color> Use it to cancel the <color=red>end lag</color> from various actions from parries to attacks.")},
+            {("Combat Hint:\nCancelling\nEnemy Attacks", "In exchange for some <color=cyan>energy</color> you can <color=green>cancel enemy attack animations</color> - simply <color=purple>blink</color> to them and immediately <color=cyan>shoot</color> them once.")},
             {("Combat Hint:\nSkipping Combat", "While getting good at combat is useful, you also want to <color=green>skip combat arenas</color> as much as possible. " +
                 "A lot of arenas can have their activation box <color=green>maneuvered around,</color> and some can be <color=green>escaped after activating.</color> " +
                 "Remember that <color=yellow>jester swipes</color>  and <color=cyan>homing attacks</color> can <color=green>take you through walls!</color> ")},
@@ -133,9 +133,6 @@ namespace Spark3MasteryMode
 
             {("Exploit Fixes:\nDash Phasing", "<color=orange>Fark</color> and <color=cyan>Reaper Jester</color> can <color=red>no longer phase through some solid walls using their dash.</color> You'll have to work a bit harder " +
                 "if you want out of bounds.")},
-            {("Exploit Fixes:\nSfarx Stalling", "The exploit that lets <color=cyan>Sfarx</color> <color=red>ignore the fall damage mechanic</color> to skip Pacific Abyss and Final Utopia has been fixed. " +
-                "No skipping the meat of these levels anymore.")},
-
         };
 
         public static List<(string, string)> HintsList = new List<(string, string)>()

@@ -98,6 +98,7 @@
     <Compile Include="FixHystoriaBossFightSoftLock.cs" />
     <Compile Include="FixPulley.cs" />
     <Compile Include="FixShotPosition.cs" />
+    <Compile Include="GiveFloatChargeShot.cs" />
     <Compile Include="MakeChallengeParry.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
