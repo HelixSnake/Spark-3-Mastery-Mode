@@ -16,15 +16,18 @@ namespace Spark3MasteryMode
 		private const float FloatCooldownTime = 0.5f;
 		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial)
 		{
-			if (CharacterAnimatorChange.Character == 2)
-			{
-				FloatCooldownCounter += Time.fixedDeltaTime;
-			}
-			if (__instance.Inp.Rewinp.GetButtonUp("LockOn") && __instance.Charge > __instance.ChargedThreshold && __instance.Actions.Action != 4 && __instance.Actions.Action != 2 && __instance.Actions.Action != 10)
+			if (MasteryMod.DifficultyIsMastery())
 			{
 				if (CharacterAnimatorChange.Character == 2)
 				{
-					__instance.Actions.ChangeAction(10);
+					FloatCooldownCounter += Time.fixedDeltaTime;
+				}
+				if (__instance.Inp.Rewinp.GetButtonUp("LockOn") && __instance.Charge > __instance.ChargedThreshold && __instance.Actions.Action != 4 && __instance.Actions.Action != 2 && __instance.Actions.Action != 10)
+				{
+					if (CharacterAnimatorChange.Character == 2)
+					{
+						__instance.Actions.ChangeAction(10);
+					}
 				}
 			}
 		}
@@ -35,13 +38,16 @@ namespace Spark3MasteryMode
 	{
 		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial)
 		{
-			if (__instance.Charge > __instance.ChargedThreshold)
+			if (MasteryMod.DifficultyIsMastery())
 			{
-				if (CharacterAnimatorChange.Character == 2)
+				if (__instance.Charge > __instance.ChargedThreshold)
 				{
-					__instance.Anim.SetTrigger("Start_Attack_Finisher");
-					__instance.Anim.SetTrigger("Next_Finisher");
-					__instance.Anim.SetTrigger("Next_Attack");
+					if (CharacterAnimatorChange.Character == 2)
+					{
+						__instance.Anim.SetTrigger("Start_Attack_Finisher");
+						__instance.Anim.SetTrigger("Next_Finisher");
+						__instance.Anim.SetTrigger("Next_Attack");
+					}
 				}
 			}
 		}
@@ -52,39 +58,42 @@ namespace Spark3MasteryMode
 	{
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
-			if (CharacterAnimatorChange.Character == 2)
+			if (MasteryMod.DifficultyIsMastery())
 			{
-				if (___Counter > __instance.ActionDuration * 3)
+				if (CharacterAnimatorChange.Character == 2)
 				{
-					__instance.Actions.Action00.ManageSkinRotation();
-					__instance.Actions.ChangeAction(0);
-				}
-				else
-				{
-					if (___Counter > __instance.ActionDuration * 1.4f)
+					if (___Counter > __instance.ActionDuration * 3)
 					{
-						__instance.Anim.SetTrigger("Next_Finisher");
+						__instance.Actions.Action00.ManageSkinRotation();
+						__instance.Actions.ChangeAction(0);
 					}
-					if (___Counter > __instance.ActionDuration * 2 && !__instance.Player.Grounded)
+					else
 					{
-						if (__instance.Inp.Rewinp.GetButtonDown("Jump"))
+						if (___Counter > __instance.ActionDuration * 1.4f)
 						{
-							__instance.Actions.ChangeAction(1);
-							__instance.Actions.Action01.DoDoubleJump();
+							__instance.Anim.SetTrigger("Next_Finisher");
 						}
-					}
-					if (HomingAttackControl.TargetObject != null)
-					{
-						if (___Counter < __instance.ActionDuration)
+						if (___Counter > __instance.ActionDuration * 2 && !__instance.Player.Grounded)
 						{
-							__instance.BlastLookAtEnemy();
+							if (__instance.Inp.Rewinp.GetButtonDown("Jump"))
+							{
+								__instance.Actions.ChangeAction(1);
+								__instance.Actions.Action01.DoDoubleJump();
+							}
 						}
-						if (Action07_Attack.NearestEnemy != null && Vector3.Distance(__instance.transform.position, Action07_Attack.NearestEnemy.position) < 50f)
+						if (HomingAttackControl.TargetObject != null)
 						{
-							__instance.Player.rigid.velocity = Vector3.zero;
 							if (___Counter < __instance.ActionDuration)
 							{
 								__instance.BlastLookAtEnemy();
+							}
+							if (Action07_Attack.NearestEnemy != null && Vector3.Distance(__instance.transform.position, Action07_Attack.NearestEnemy.position) < 50f)
+							{
+								__instance.Player.rigid.velocity = Vector3.zero;
+								if (___Counter < __instance.ActionDuration)
+								{
+									__instance.BlastLookAtEnemy();
+								}
 							}
 						}
 					}
@@ -98,14 +107,17 @@ namespace Spark3MasteryMode
 	{
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
-			Transform accessories = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("Float_Acessories");
-			if (accessories != null)
-            {
-				var accessoriesRenderer = accessories.GetComponent<SkinnedMeshRenderer>();
-				SkinnedMeshRenderer[] newArray = new SkinnedMeshRenderer[__instance.PlayerModel.Length + 1];
-				__instance.PlayerModel.CopyTo(newArray, 0);
-				newArray[__instance.PlayerModel.Length] = accessoriesRenderer;
-				__instance.PlayerModel = newArray;
+			if (MasteryMod.DifficultyIsMastery())
+			{
+				Transform accessories = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("Float_Acessories");
+				if (accessories != null)
+				{
+					var accessoriesRenderer = accessories.GetComponent<SkinnedMeshRenderer>();
+					SkinnedMeshRenderer[] newArray = new SkinnedMeshRenderer[__instance.PlayerModel.Length + 1];
+					__instance.PlayerModel.CopyTo(newArray, 0);
+					newArray[__instance.PlayerModel.Length] = accessoriesRenderer;
+					__instance.PlayerModel = newArray;
+				}
 			}
 		}
 	}
