@@ -191,23 +191,23 @@ namespace Spark3MasteryMode
                 "<color=green>repeatedly quickly tapping the boost button</color> instead of holding it. Try to <color=green>space your taps</color> so you <color=green>just barely use all of it up,</color> " +
                 "and save it when there's a boost pad.") },
 
-            {("Lost Ravine:\nSpeed", "It's actually possible to <color=green>skip the fights</color> on this level. Figuring out how to is <color=red>critical</color> for beating the speed medal targets. " +
-                "For a hint - <color=yellow>closed doors are not always impassable.</color>") },
-
             {("High Rise Tracks:\nSpeed", "On the first set of <color=grey>conveyer ramps,</color> take the <color=green>rightmost ramp</color> and <color=yellow>jester swipe</color> the <color=yellow>rightmost line of bits,</color> you will ride the side of the ramp and <color=green>keep from losing speed.</color> " +
                 "On the other ramps, <color=cyan>jump</color> before you hit them to more reliably <color=green>maintain your speed</color> and keep from losing it.") },
             
             {("Lost Riviera:\nSpeed", "The way you start this level is <color=red>EXTREMELY IMPORTANT</color> as it determines how much <color=cyan>momentum</color> you'll have for the segments after, and whether you'll reach the <color=cyan>energy gain threshold</color> (see the three <color=cyan>'rail braking'</color> tips). " +
                 "Start by jumping and getting the <color=cyan>blue bit bubble</color> on the left, then find a route that lets you <color=green>rail jump to near the end of the</color> <color=red>leftmost</color> <color=green>off rails segment</color> with around <color=cyan>half your energy bar full.</color>") },
-        
+
+            {("Lost Ravine:\nSpeed", "It's actually possible to <color=green>skip the fights</color> on this level. Figuring out how to is <color=red>critical</color> for beating the speed medal targets. " +
+                "For a hint - <color=yellow>closed doors are not always impassable.</color>") },
+
             {("District 5:\nSpeed", "After you <color=cyan>land in the water,</color> take the middle route to the <color=grey>boost ramp</color> and <color=cyan>jump high</color> to the left; when you get to the <color=yellow>2 lines of bits, charge a jester dash</color> and then, timed so you won't hit the <color=red>fire</color>, " +
                 "<color=yellow>jester swipe the right line of bits</color> to the <color=grey>boost ramp.</color> This route can save you an incredible amount of time.") },
 
-            {("district 6:\nScore", "<color=yellow>Checkpoints</color> give the most <color=purple>score,</color> but the <color=red>least multiplier.</color> You should <color=green>work your way to the end</color> getting as many points as you can while <color=red>avoiding checkpoints,</color> and then <color=yellow>run back and grab them all.</color>") },
+            {("District 6:\nScore", "<color=yellow>Checkpoints</color> give the most <color=purple>score,</color> but the <color=red>least multiplier.</color> You should <color=green>work your way to the end</color> getting as many points as you can while <color=red>avoiding checkpoints,</color> and then <color=yellow>run back and grab them all.</color>") },
 
-            {("district 9:\nExplore Medals", "The <color=orange>off-pulley part</color> of the <color=orange>final rocket pulley section</color> can be traversed <color=green>forwards or backwards</color> to get the <color=blue>explore medals</color> - getting onto it from <color=cyan>the end</color> is the easier of the two. Here's a hint - <color=red>don't fall down to the area where the goal is!</color>") },
+            {("District 9:\nExplore Medals", "The <color=orange>off-pulley part</color> of the <color=orange>final rocket pulley section</color> can be traversed <color=green>forwards or backwards</color> to get the <color=blue>explore medals</color> - getting onto it from <color=cyan>the end</color> is the easier of the two. Here's a hint - <color=red>don't fall down to the area where the goal is!</color>") },
 
-            {("district 79:\nSpeed", "Every fight in this level can be <color=green>skipped!</color> The first one is the trickiest - <color=yellow>jester swiping through the wall</color> will leave you <color=red>stuck under an invisible ceiling.</color> Try to get to the <color=cyan>reservior underneath</color> and <color=cyan>dash jump</color> to the next platform. If you do it right you'll <color=green>miss the invisible ceiling</color> and can <color=cyan>wall jump up.</color>") },
+            {("District 79:\nSpeed", "Every fight in this level can be <color=green>skipped!</color> The first one is the trickiest - <color=yellow>jester swiping through the wall</color> will leave you <color=red>stuck under an invisible ceiling.</color> Try to get to the <color=cyan>reservior underneath</color> and <color=cyan>dash jump</color> to the next platform. If you do it right you'll <color=green>miss the invisible ceiling</color> and can <color=cyan>wall jump up.</color>") },
 
             {("Throwback:\nCombat", "Double's <color=yellow>delayed vertical flash</color> move can actually be <color=yellow>blocked</color> and <color=cyan>parried.</color> This knowledge is critical if you want to keep up the aggression.") },
         };
