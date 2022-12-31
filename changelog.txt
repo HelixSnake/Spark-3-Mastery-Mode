@@ -111,7 +111,21 @@ Release 0.4.0 [Pending]
 + Added speed and score targets to the world map stage menu
 
 The following stages have new speed targets:
+District 5
+District 6
+District 9
+District 4
+District 79
+
 
 The following stages have new score targets:
+District 5
+District 6
+District 9
+District 79
 
 The following stages have some exploration medals moved:
+District 5
+District 6
+District 9
+District 79

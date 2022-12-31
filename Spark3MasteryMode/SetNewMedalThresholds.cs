@@ -295,36 +295,36 @@ namespace Spark3MasteryMode
 
                 // district 5
 
-                //Save.SpeedGoldTargets[8] = 220f;
-                //Save.SpeedDiaTargets[8] = 190f;
-                //Save.ScoreGoldTargets[8] = 200000f;
-                //Save.ScoreDiaTargets[8] = 350000f;
+                Save.SpeedGoldTargets[8] = 220f;
+                Save.SpeedDiaTargets[8] = 190f;
+                Save.ScoreGoldTargets[8] = 200000f;
+                Save.ScoreDiaTargets[8] = 350000f;
 
                 // district 6 
 
-                //Save.SpeedGoldTargets[14] = 60f;
-                //Save.SpeedDiaTargets[14] = 35f;
-                //Save.ScoreGoldTargets[14] = 80000f;
-                //Save.ScoreDiaTargets[14] = 150000f;
+                Save.SpeedGoldTargets[14] = 60f;
+                Save.SpeedDiaTargets[14] = 35f;
+                Save.ScoreGoldTargets[14] = 80000f;
+                Save.ScoreDiaTargets[14] = 150000f;
 
                 // district 9
 
-                //Save.SpeedGoldTargets[15] = 160f;
-                //Save.SpeedDiaTargets[15] = 140f;
-                //Save.ScoreGoldTargets[15] = 200000f;
-                //Save.ScoreDiaTargets[15] = 400000f;
+                Save.SpeedGoldTargets[15] = 155f;
+                Save.SpeedDiaTargets[15] = 140f;
+                Save.ScoreGoldTargets[15] = 200000f;
+                Save.ScoreDiaTargets[15] = 400000f;
 
                 // district 4
 
-                //Save.SpeedGoldTargets[16] = f;
-                //Save.SpeedDiaTargets[16] = f;
+                Save.SpeedGoldTargets[16] = 85f;
+                Save.SpeedDiaTargets[16] = 100f;
 
                 // district 79
 
-                //Save.SpeedGoldTargets[17] = 100f;
-                //Save.SpeedDiaTargets[17] = 70f;
-                //Save.ScoreGoldTargets[17] = 200000f;
-                //Save.ScoreDiaTargets[17] = 360000f;
+                Save.SpeedGoldTargets[17] = 100f;
+                Save.SpeedDiaTargets[17] = 70f;
+                Save.ScoreGoldTargets[17] = 200000f;
+                Save.ScoreDiaTargets[17] = 360000f;
             }
         }
     }
