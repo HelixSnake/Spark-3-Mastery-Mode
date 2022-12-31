@@ -145,44 +145,44 @@ namespace Spark3MasteryMode
                 Save.SpeedGoldTargets[0] = 95f;
                 Save.SpeedDiaTargets[0] = 90f;
                 // doublemoon villa
-                Save.SpeedGoldTargets[1] = 85f;
+                Save.SpeedGoldTargets[1] = 90f;
                 Save.SpeedDiaTargets[1] = 75f;
-                Save.ScoreGoldTargets[1] = 400000f;
+                Save.ScoreGoldTargets[1] = 350000f;
                 Save.ScoreDiaTargets[1] = 550000f;
                 // high rise tracks
-                Save.SpeedGoldTargets[2] = 40f;
+                Save.SpeedGoldTargets[2] = 45f;
                 Save.SpeedDiaTargets[2] = 32f;
-                Save.ScoreGoldTargets[2] = 280000f;
+                Save.ScoreGoldTargets[2] = 250000f;
                 Save.ScoreDiaTargets[2] = 300000f;
                 // cold-dry desert
-                Save.SpeedGoldTargets[3] = 36f;
+                Save.SpeedGoldTargets[3] = 38f;
                 Save.SpeedDiaTargets[3] = 32f;
                 // A.M. Village
-                Save.SpeedGoldTargets[4] = 45f;
+                Save.SpeedGoldTargets[4] = 50f;
                 Save.SpeedDiaTargets[4] = 41f;
                 // Saw Man
-                Save.SpeedGoldTargets[9] = 90f;
+                Save.SpeedGoldTargets[9] = 100f;
                 Save.SpeedDiaTargets[9] = 80f;
                 // slope jumping
                 Save.SpeedGoldTargets[100] = 32f;
                 Save.SpeedDiaTargets[100] = 30f;
                 // jester dash
-                Save.SpeedGoldTargets[101] = 45f;
+                Save.SpeedGoldTargets[101] = 47f;
                 Save.SpeedDiaTargets[101] = 42f;
                 // charged jester dash
                 Save.SpeedGoldTargets[102] = 48f;
                 Save.SpeedDiaTargets[102] = 45f;
 
                 // lost riviera
-                Save.SpeedGoldTargets[5] = 180f;
+                Save.SpeedGoldTargets[5] = 195f;
                 Save.SpeedDiaTargets[5] = 165f;
-                Save.ScoreGoldTargets[5] = 350000f;
+                Save.ScoreGoldTargets[5] = 275000f;
                 Save.ScoreDiaTargets[5] = 425000f;
 
                 // lost ravine
-                Save.SpeedGoldTargets[6] = 130f;
+                Save.SpeedGoldTargets[6] = 180f;
                 Save.SpeedDiaTargets[6] = 107f;
-                Save.ScoreGoldTargets[6] = 250000f;
+                Save.ScoreGoldTargets[6] = 200000f;
                 Save.ScoreDiaTargets[6] = 325000f;
 
                 // canyon zero
@@ -191,11 +191,11 @@ namespace Spark3MasteryMode
 
                 // beatdown tower
                 // 13
-                Save.SpeedGoldTargets[13] = 110f;
+                Save.SpeedGoldTargets[13] = 120f;
                 Save.SpeedDiaTargets[13] = 97f;
 
                 // arid hole
-                Save.SpeedGoldTargets[11] = 60f;
+                Save.SpeedGoldTargets[11] = 65f;
                 Save.SpeedDiaTargets[11] = 52f;
 
                 // splash grotto
@@ -208,16 +208,42 @@ namespace Spark3MasteryMode
                 // wall jump
                 Save.SpeedGoldTargets[104] = 20f;
                 Save.SpeedDiaTargets[104] = 17f;
-                // wall running
-                Save.SpeedGoldTargets[105] = 33f;
+                // wall walking
+                Save.SpeedGoldTargets[105] = 36f;
                 Save.SpeedDiaTargets[105] = 29f;
 
                 // district 5
 
-                //Save.SpeedGoldTargets[8] = 215f;
-                //Save.SpeedDiaTargets[8] = 200f;
+                //Save.SpeedGoldTargets[8] = 220f;
+                //Save.SpeedDiaTargets[8] = 190f;
+                //Save.ScoreGoldTargets[8] = 200000f;
+                //Save.ScoreDiaTargets[8] = 350000f;
 
+                // district 6 
 
+                //Save.SpeedGoldTargets[14] = 60f;
+                //Save.SpeedDiaTargets[14] = 35f;
+                //Save.ScoreGoldTargets[14] = 80000f;
+                //Save.ScoreDiaTargets[14] = 150000f;
+
+                // district 9
+
+                //Save.SpeedGoldTargets[15] = 160f;
+                //Save.SpeedDiaTargets[15] = 140f;
+                //Save.ScoreGoldTargets[15] = 200000f;
+                //Save.ScoreDiaTargets[15] = 400000f;
+
+                // district 4
+
+                //Save.SpeedGoldTargets[16] = f;
+                //Save.SpeedDiaTargets[16] = f;
+
+                // district 79
+
+                //Save.SpeedGoldTargets[17] = 100f;
+                //Save.SpeedDiaTargets[17] = 70f;
+                //Save.ScoreGoldTargets[17] = 200000f;
+                //Save.ScoreDiaTargets[17] = 360000f;
             }
         }
     }
