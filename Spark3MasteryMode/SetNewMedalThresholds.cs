@@ -316,8 +316,8 @@ namespace Spark3MasteryMode
 
                 // district 4
 
-                Save.SpeedGoldTargets[16] = 85f;
-                Save.SpeedDiaTargets[16] = 100f;
+                Save.SpeedGoldTargets[16] = 100f;
+                Save.SpeedDiaTargets[16] = 85f;
 
                 // district 79
 
