@@ -91,7 +91,9 @@ namespace Spark3MasteryMode
 
             {("Speed Hint:\nExperimentation", "When you are testing your run and experimenting with the various mechanics, remember the <color=magenta>Radar</color> has a " +
                 "<color=green>speed indicator</color> on it - use it to make sure you're doing the <color=green>right things</color> to gain and maintain speed!")},
-            
+
+            {("Speed Hint:\nCharged Jester\nDash Cap", "Charged Jester Dash reaches <color=yellow>max charge</color> earlier than you think - around <color=yellow>halfway through the audio cue.</color> Practice doing it with the <color=magenta>Radar</color> to get a feel for when to release it!")},
+
             {("Speed Hint:\nSfarx", "While other characters have top speeds which they can not get past without downward slopes or other speed gaining mechanics, " +
                 "<color=cyan>Sfarx has no top speed.</color> He is generally <color=green>faster</color> in every case that doesn't involve a specific ability of another character, and as such " +
                 "should be your <color=green>main choice</color> when you want to go <color=green>as fast as possible.</color>")},

@@ -92,15 +92,18 @@
   <ItemGroup>
     <Compile Include="DisableEJElectricity.cs" />
     <Compile Include="DisableForcedCharacter.cs" />
+    <Compile Include="FixChargeTapping.cs" />
     <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="FixDashBlinkDrift.cs" />
     <Compile Include="FixDashOOB.cs" />
+    <Compile Include="FixDownDashLoss.cs" />
     <Compile Include="FixHystoriaBossFightSoftLock.cs" />
     <Compile Include="FixPulley.cs" />
     <Compile Include="FixShotPosition.cs" />
     <Compile Include="GiveFloatChargeShot.cs" />
     <Compile Include="KillCloudShotUsers.cs" />
     <Compile Include="MakeChallengeParry.cs" />
+    <Compile Include="MakeDropOrderConsistent.cs" />
     <Compile Include="MasteryDifficulty.cs" />
     <Compile Include="MasteryMod.cs" />
     <Compile Include="MoreAccurateComboMeter.cs" />
