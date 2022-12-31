@@ -109,6 +109,7 @@ Release 0.4.0 [Pending]
 + Fixed exploit that caused you to gain more speed then you should when tapping charged dash very quickly
 + Fixed bug where spark would lose the ability to down dash again if a down dash is cancelled in the first few frames
 + Added speed and score targets to the world map stage menu
+& Made some of the gold medal targets more forgiving
 
 The following stages have new speed targets:
 District 5

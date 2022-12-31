@@ -12,7 +12,7 @@ namespace Spark3MasteryMode
     [HarmonyPatch("SetExploreMedal")]
     class MakeExploreMedalsUncollectable
     {
-        private static List<int> enabledMedalStages = new List<int> { 1, 2, 5, 6, 7 };
+        private static List<int> enabledMedalStages = new List<int> { 1, 2, 5, 6, 7, 8, 14, 15, 17 };
         private static bool Prefix()
         {
             if (MasteryMod.DifficultyIsMastery())
@@ -97,7 +97,7 @@ namespace Spark3MasteryMode
 
             {(8, 0), new Vector3(425.8514f, 630.6449f, -3737.659f) },
             {(8, 1), new Vector3(-72.3306f, 397.9791f, 3668.934f) },
-            {(8, 2), new Vector3(-246.2478f, 630.441f, 4568.729f) },
+            {(8, 2), new Vector3(-250.2478f, 630.441f, 4566.729f) },
             {(8, 3), new Vector3(301.5574f, 286.723f, 5973.084f) },
             {(8, 4), new Vector3(-303.5384f, 486.7621f, 5972f) },
             {(8, 5), new Vector3(-295.6239f, 773.0584f, 6582.098f) },
@@ -114,7 +114,7 @@ namespace Spark3MasteryMode
             {(15, 1), new Vector3(-190.2955f, 203.3545f, 3677.852f) },
             {(15, 2), new Vector3(-2671.333f, 119.5486f, 4874.401f) },
             {(15, 3), new Vector3(-2538.541f, 408.8451f, 5630.845f) },
-            {(15, 4), new Vector3(353.8323f, 198.505f, 346.8789f) },
+            {(15, 4), new Vector3(-2341.339f, 408.4889f, 5313.162f) },
             {(15, 5), new Vector3(91.401f, 310.3247f, 6291.083f) },
             {(15, 6), new Vector3(-534.1182f, 333.0716f, 7155.086f) },
             {(15, 7), new Vector3(-4242.333f, 796.6566f, 5337.876f) },
@@ -127,7 +127,7 @@ namespace Spark3MasteryMode
             {(17, 3), new Vector3(1145.292f, 154.4202f, 663.5221f) },
             {(17, 4), new Vector3(1481.67f, 185.966f, 1001.992f) },
             {(17, 5), new Vector3(1493.069f, 178.8751f, 1517.701f) },
-            {(17, 6), new Vector3(336.2091f, 124.4428f, 1959.539f) },
+            {(17, 6), new Vector3(336.2091f, 204.4428f, 1959.539f) },
             {(17, 7), new Vector3(-616.312f, 39.7034f, 1962.721f) },
             {(17, 8), new Vector3(-1284.084f, 219.035f, 1884.625f) },
             {(17, 9), new Vector3(-1359.787f, 56.3276f, 1838.8f) },
