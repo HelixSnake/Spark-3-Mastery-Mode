@@ -117,6 +117,10 @@ namespace MoreAggressivePostProcessing
             newColorGradingSettings.tonemapping.neutralWhiteOut = 10f;
             newColorGradingSettings.tonemapping.neutralWhiteLevel = 5f;
             newColorGradingSettings.tonemapping.neutralWhiteClip = 6f;
+            var newLumVsSat = newColorGradingSettings.curves.lumVSsat = new ColorGradingCurve(new AnimationCurve(), 0.5f, false, new Vector2(0, 1));
+            newLumVsSat.curve.AddKey(new Keyframe(0, 0.5f));
+            newLumVsSat.curve.AddKey(new Keyframe(0.4f, 0.5f));
+            newLumVsSat.curve.AddKey(new Keyframe(1, 0f));
 
             SetSettings();
         }

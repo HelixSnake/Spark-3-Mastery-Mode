@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using MoreAggressivePostProcessing;
 
-[assembly: MelonInfo(typeof(MoreAggressivePostProcessingMod), "More Aggressive Post Processing", "1.1.0", "Helix Snake")]
+[assembly: MelonInfo(typeof(MoreAggressivePostProcessingMod), "More Aggressive Post Processing", "1.2.0", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
