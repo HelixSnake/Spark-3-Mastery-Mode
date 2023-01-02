@@ -103,7 +103,7 @@ Release 0.3.2
 & Fixed Split Utopia Shelter not unlocking after new update
 + Fixed softlock in Throwback boss fight from beating Double and then RYNO
 
-Release 0.4.0 [Pending]
+Release 0.4.0
 + Gave Float a charge shot move
 + Made the order of dropped items from enemies the same every level run, to make score runs consistent
 + Fixed exploit that caused you to gain more speed then you should when tapping charged dash very quickly
