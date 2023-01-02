@@ -111,12 +111,12 @@ namespace MoreAggressivePostProcessing
             defaultColorGradingSettings = __instance.Profile.colorGrading.settings;
             newColorGradingSettings = defaultColorGradingSettings;
             newColorGradingSettings.tonemapping.tonemapper = UnityEngine.PostProcessing.ColorGradingModel.Tonemapper.Neutral;
-            newColorGradingSettings.tonemapping.neutralBlackIn = 0.05f;
+            newColorGradingSettings.tonemapping.neutralBlackIn = 0.04f;
             newColorGradingSettings.tonemapping.neutralBlackOut = 0f;
             newColorGradingSettings.tonemapping.neutralWhiteIn = 10f;
             newColorGradingSettings.tonemapping.neutralWhiteOut = 10f;
             newColorGradingSettings.tonemapping.neutralWhiteLevel = 5f;
-            newColorGradingSettings.tonemapping.neutralWhiteClip = 6f;
+            newColorGradingSettings.tonemapping.neutralWhiteClip = 7f;
             var newLumVsSat = newColorGradingSettings.curves.lumVSsat = new ColorGradingCurve(new AnimationCurve(), 0.5f, false, new Vector2(0, 1));
             newLumVsSat.curve.AddKey(new Keyframe(0, 0.5f));
             newLumVsSat.curve.AddKey(new Keyframe(0.4f, 0.5f));
