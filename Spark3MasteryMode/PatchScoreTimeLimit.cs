@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using MelonLoader;
 
-namespace Spark3MasteryMode
+namespace Spark3ScoreLockMod
 {
 
     [HarmonyPatch(typeof(ScoreManager))]
@@ -20,10 +20,10 @@ namespace Spark3MasteryMode
         }
         private static void Postfix(ref float ___TimeLimitStatic)
         {
-            if (MasteryMod.DifficultyIsMastery())
+            if (!ScoreLockMod.DifficultyIsMastery())
             {
-                ScoreManager.IgnoreLimit = false;
-                ___TimeLimitStatic = 300f;
+                if (Save.CurrentStageIndex != 7 && Save.CurrentStageIndex != 50)
+                    ___TimeLimitStatic = 420f;
             }
         }
     }

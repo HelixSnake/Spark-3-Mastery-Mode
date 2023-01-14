@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
 
-namespace Spark3MasteryMode
+namespace Spark3ScoreLockMod
 {
-    public class MasteryMod : MelonMod
+    public class ScoreLockMod : MelonMod
     {
         public override void OnApplicationStart()
         {
