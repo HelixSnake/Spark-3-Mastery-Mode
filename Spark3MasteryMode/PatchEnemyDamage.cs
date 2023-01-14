@@ -38,7 +38,8 @@ namespace Spark3MasteryMode
         private static void Prefix(RadsamuEnemy __instance)
         {
             if (MasteryMod.DifficultyIsMastery())
-            { 
+            {
+                __instance.SmallAttackJuggleLimit = Mathf.Min(__instance.SmallAttackJuggleLimit, 15);
                 if (__instance.MaxHp == 0.05f) // nerf motorhead health
                 {
                     __instance.MaxHp = 0.01f;

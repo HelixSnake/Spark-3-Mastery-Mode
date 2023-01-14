@@ -67,4 +67,17 @@ namespace Spark3MasteryMode
         }
     }
 
+    [HarmonyPatch(typeof(Action00_Regular))]
+    [HarmonyPatch("ManageDash")]
+    class ReduceDashBlockCounterDelay
+    {
+        private static void Postfix(Action00_Regular __instance)
+        {
+            if (MasteryMod.DifficultyIsMastery())
+            {
+                if (__instance.Actions.Action06.enabled)
+                    __instance.Actions.Action12.BlockCounter = Math.Max(__instance.Actions.Action12.BlockCounter, 0.1f);
+            }
+        }
+    }
 }

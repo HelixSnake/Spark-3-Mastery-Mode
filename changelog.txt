@@ -130,3 +130,11 @@ District 5
 District 6
 District 9
 District 79
+
+Release 0.4.1 (pending)
+& Reduced the amount of delay a dash adds to your ability to block
++ Gave Reaper Jester extra invuln on his parry, so it is safer to follow up after the second swing
++ Dashing now has a tiny amound of invuln regardless of character, to make characters other than fark and reaper jester viable on the later spark 2 stages
++ Hyperath canon explosions (both kind) can no longer hit you after blocking / iframing them
++ set the minimum small attack juggle limit of enemies to 15
++ made it so sfarx's shots don't stall if aiming at an enemy who can no longer be juggled by shots
