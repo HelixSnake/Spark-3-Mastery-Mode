@@ -13,14 +13,27 @@ namespace Spark3MasteryMode
 	class GiveFloatChargeShot
 	{
 		private static float FloatCooldownCounter = 0;
-		private const float FloatCooldownTime = 0.5f;
-		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial)
+		private const float FloatCooldownTime = 1.5f;
+		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial, ref float ___Counter, ref bool __state)
 		{
 			if (MasteryMod.DifficultyIsMastery())
 			{
+				__state = false;
 				if (CharacterAnimatorChange.Character == 2)
 				{
 					FloatCooldownCounter += Time.fixedDeltaTime;
+				}
+				if ((__instance.Inp.Rewinp.GetButtonDown("LockOn")) && (__instance.Actions.Action == 0 || __instance.Actions.Action == 1 || __instance.Actions.Action == 6 || __instance.Actions.Action == 7))
+				{
+					if (CharacterAnimatorChange.Character == 2 && FloatCooldownTime < FloatCooldownCounter)
+					{
+						FloatCooldownCounter = 0f;
+						___Counter = 0f;
+						___Buffer = false;
+						___Initial = false;
+						__instance.Actions.ChangeAction(10);
+						__state = true;
+					}
 				}
 				if (__instance.Inp.Rewinp.GetButtonUp("LockOn") && __instance.Charge > __instance.ChargedThreshold && __instance.Actions.Action != 4 && __instance.Actions.Action != 2 && __instance.Actions.Action != 10)
 				{
@@ -31,11 +44,23 @@ namespace Spark3MasteryMode
 				}
 			}
 		}
+
+		private static void Postfix( ref bool ___Buffer, ref bool __state)
+		{
+			if (MasteryMod.DifficultyIsMastery())
+			{
+				if (__state)
+				{
+					___Buffer = false;
+				}
+			}
+		}
 	}
 	[HarmonyPatch(typeof(Action10Control_Blast))]
 	[HarmonyPatch("InitialActions")]
 	class GiveFloatChargeShot2
 	{
+		public static bool Charged = false;
 		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial)
 		{
 			if (MasteryMod.DifficultyIsMastery())
@@ -47,7 +72,15 @@ namespace Spark3MasteryMode
 						__instance.Anim.SetTrigger("Start_Attack_Finisher");
 						__instance.Anim.SetTrigger("Next_Finisher");
 						__instance.Anim.SetTrigger("Next_Attack");
+						Charged = true;
 					}
+				}
+				else if (CharacterAnimatorChange.Character == 2)
+				{
+					__instance.Anim.SetTrigger("Start_Attack");
+					__instance.Anim.SetTrigger("Next_Attack");
+					Charged = false;
+					GiveFloatChargeShot3.movedFwd = false;
 				}
 			}
 		}
@@ -56,11 +89,12 @@ namespace Spark3MasteryMode
 	[HarmonyPatch("BlastAction")]
 	class GiveFloatChargeShot3
 	{
+		public static bool movedFwd = false;
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
 			if (MasteryMod.DifficultyIsMastery())
 			{
-				if (CharacterAnimatorChange.Character == 2)
+				if (CharacterAnimatorChange.Character == 2 && GiveFloatChargeShot2.Charged)
 				{
 					if (___Counter > __instance.ActionDuration * 3)
 					{
@@ -94,6 +128,40 @@ namespace Spark3MasteryMode
 								{
 									__instance.BlastLookAtEnemy();
 								}
+							}
+						}
+					}
+				}
+				else if (CharacterAnimatorChange.Character == 2)
+                {
+					if (___Counter > __instance.ActionDuration * 2)
+					{
+						__instance.Actions.Action00.ManageSkinRotation();
+						__instance.Actions.ChangeAction(0);
+					}
+					else
+					{
+						if (___Counter > Time.fixedDeltaTime)
+						{
+							if (!movedFwd) { 
+								__instance.Anim.SetTrigger("Next_Attack");
+								movedFwd = true;
+							}
+                            else
+                            {
+								__instance.Anim.ResetTrigger("Next_Attack");
+							}
+						}
+						if (___Counter < __instance.ActionDuration)
+						{
+							__instance.BlastLookAtEnemy();
+						}
+						if (Action07_Attack.NearestEnemy != null && Vector3.Distance(__instance.transform.position, Action07_Attack.NearestEnemy.position) < 50f)
+						{
+							__instance.Player.rigid.velocity = Vector3.zero;
+							if (___Counter < __instance.ActionDuration)
+							{
+								__instance.BlastLookAtEnemy();
 							}
 						}
 					}
