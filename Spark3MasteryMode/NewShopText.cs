@@ -129,6 +129,8 @@ namespace Spark3MasteryMode
                 "close enough together can allow <color=purple>Float</color> to get through them <color=green>very quickly</color> by <color=green>mashing the homing attack button.</color> Since histun pauses the timer, dashing " +
                 "through enemies this way is <color=green>borderline instant.</color>") },
 
+            {("Speed Hint:\nWall Running", "To get a <color=green>very fast wall run</color>, start holding R2 so you <color=red>won't dash,</color> and get up next to the wall - then <color=yellow>fully charge a charged jester dash</color> into it at a <color=green>slight angle</color>, near parallel to the wall.") },
+
             {("Traversal Hint:\nRunning Up Walls", "<color=green>Running up walls</color> will be an <color=green>extremely important</color> tool for you to learn. Almost anywhere an <color=green>upward slope</color> leads " +
                 "into a <color=green>wall</color> can be used to do it, and <color=cyan>repeated dashes</color> will <color=cyan>keep you on the wall.</color> When wallrunning, to <color=green>transition around angled edges and avoid falling off,</color> run at an angle " +
                 "<color=green>almost parallel</color> to the edge.")},

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
@@ -45,7 +46,7 @@ namespace Spark3MasteryMode
 			}
 		}
 
-		private static void Postfix( ref bool ___Buffer, ref bool __state)
+		private static void Postfix(ref bool ___Buffer, ref bool __state)
 		{
 			if (MasteryMod.DifficultyIsMastery())
 			{
@@ -89,6 +90,10 @@ namespace Spark3MasteryMode
 	[HarmonyPatch("BlastAction")]
 	class GiveFloatChargeShot3
 	{
+		public static void MakeFloatMultiSpikeSmall(bool small)
+		{
+			CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("FloatIHB").Find("FloatMultiSpike").Find("Hitbox").GetComponent<HitBoxInfo>().SmallAttack = small;
+		}
 		public static bool movedFwd = false;
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
@@ -133,22 +138,24 @@ namespace Spark3MasteryMode
 					}
 				}
 				else if (CharacterAnimatorChange.Character == 2)
-                {
+				{
 					if (___Counter > __instance.ActionDuration * 2)
 					{
 						__instance.Actions.Action00.ManageSkinRotation();
 						__instance.Actions.ChangeAction(0);
+						movedFwd = false;
 					}
 					else
 					{
 						if (___Counter > Time.fixedDeltaTime)
 						{
-							if (!movedFwd) { 
+							if (!movedFwd) {
 								__instance.Anim.SetTrigger("Next_Attack");
 								movedFwd = true;
+								MakeFloatMultiSpikeSmall(true);
 							}
-                            else
-                            {
+							else
+							{
 								__instance.Anim.ResetTrigger("Next_Attack");
 							}
 						}
@@ -158,7 +165,15 @@ namespace Spark3MasteryMode
 						}
 						if (Action07_Attack.NearestEnemy != null && Vector3.Distance(__instance.transform.position, Action07_Attack.NearestEnemy.position) < 50f)
 						{
-							__instance.Player.rigid.velocity = Vector3.zero;
+							RadsamuEnemy enemy = HomingAttackControl.TargetObject.GetComponentInParent<RadsamuEnemy>();
+							if (enemy != null)
+							{
+								float juggleLimit = (float)typeof(RadsamuEnemy).GetField("SmallJuggleLimit", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(enemy);
+								if (juggleLimit > 0)
+								{
+									__instance.Player.rigid.velocity = Vector3.zero;
+								}
+							}
 							if (___Counter < __instance.ActionDuration)
 							{
 								__instance.BlastLookAtEnemy();
@@ -169,6 +184,18 @@ namespace Spark3MasteryMode
 			}
 		}
 	}
+	[HarmonyPatch(typeof(ActionManager))]
+	[HarmonyPatch("ChangeAction")]
+	class ResetFloatMultiHit
+	{
+		private static void Prefix(int ActionToChange)
+        {
+			if (ActionToChange == 7)
+				GiveFloatChargeShot3.MakeFloatMultiSpikeSmall(false);
+
+		}
+	}
+
 	[HarmonyPatch(typeof(Action10Control_Blast))]
 	[HarmonyPatch("Start")]
 	class GiveFloatChargeShotGlow
