@@ -20,10 +20,7 @@ namespace Spark3MasteryMode
 			if (MasteryMod.DifficultyIsMastery())
 			{
 				__state = false;
-				if (CharacterAnimatorChange.Character == 2)
-				{
-					FloatCooldownCounter += Time.fixedDeltaTime;
-				}
+				FloatCooldownCounter += Time.fixedDeltaTime;
 				if ((__instance.Inp.Rewinp.GetButtonDown("LockOn")) && (__instance.Actions.Action == 0 || __instance.Actions.Action == 1 || __instance.Actions.Action == 6 || __instance.Actions.Action == 7))
 				{
 					if (CharacterAnimatorChange.Character == 2 && FloatCooldownTime < FloatCooldownCounter)
@@ -189,9 +186,12 @@ namespace Spark3MasteryMode
 	class ResetFloatMultiHit
 	{
 		private static void Prefix(int ActionToChange)
-        {
-			if (ActionToChange == 7)
-				GiveFloatChargeShot3.MakeFloatMultiSpikeSmall(false);
+		{
+			if (MasteryMod.DifficultyIsMastery())
+			{
+				if (ActionToChange == 7)
+					GiveFloatChargeShot3.MakeFloatMultiSpikeSmall(false);
+			}
 
 		}
 	}
