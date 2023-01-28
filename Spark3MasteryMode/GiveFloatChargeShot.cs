@@ -91,6 +91,11 @@ namespace Spark3MasteryMode
 		{
 			CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("FloatIHB").Find("FloatMultiSpike").Find("Hitbox").GetComponent<HitBoxInfo>().SmallAttack = small;
 		}
+		public static void KeepFloatMultiSpikeGoing()
+		{
+			var IHB = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("FloatIHB").Find("FloatMultiSpike").Find("Hitbox").GetComponent<IntegradedHitBoxControl>();
+			typeof(IntegradedHitBoxControl).GetField("counter", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(IHB, 0.0f);
+		}
 		public static bool movedFwd = false;
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
@@ -136,7 +141,8 @@ namespace Spark3MasteryMode
 				}
 				else if (CharacterAnimatorChange.Character == 2)
 				{
-					if (___Counter > __instance.ActionDuration * 2)
+					bool circleActive = GameObject.Find("FloatDamageCircle").GetComponent<FloatDamageTarget>().Hit.activeSelf;
+					if (!circleActive && ___Counter > __instance.ActionDuration * 2.5)
 					{
 						__instance.Actions.Action00.ManageSkinRotation();
 						__instance.Actions.ChangeAction(0);
@@ -163,13 +169,9 @@ namespace Spark3MasteryMode
 						if (Action07_Attack.NearestEnemy != null && Vector3.Distance(__instance.transform.position, Action07_Attack.NearestEnemy.position) < 50f)
 						{
 							RadsamuEnemy enemy = HomingAttackControl.TargetObject.GetComponentInParent<RadsamuEnemy>();
-							if (enemy != null)
+							if (enemy != null && !__instance.Player.Grounded)
 							{
-								float juggleLimit = (float)typeof(RadsamuEnemy).GetField("SmallJuggleLimit", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(enemy);
-								if (juggleLimit > 0)
-								{
-									__instance.Player.rigid.velocity = new Vector3(0, (enemy.Rigid.velocity + enemy.Rigid.transform.position - __instance.Player.rigid.transform.position).y, 0);
-								}
+								__instance.Player.rigid.velocity = new Vector3(0, (enemy.Rigid.velocity + (enemy.Rigid.transform.position - __instance.Player.rigid.transform.position)).y, 0);
 							}
 						}
 					}
