@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using UnityEngine;
 
-namespace Spark3MasteryMode
+namespace FloatChargeShot
 {
 	[HarmonyPatch(typeof(Action10Control_Blast))]
 	[HarmonyPatch("FixedUpdate")]
@@ -17,7 +17,7 @@ namespace Spark3MasteryMode
 		private const float FloatCooldownTime = 1.5f;
 		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial, ref float ___Counter, ref bool __state)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				__state = false;
 				FloatCooldownCounter += Time.fixedDeltaTime;
@@ -45,7 +45,7 @@ namespace Spark3MasteryMode
 
 		private static void Postfix(ref bool ___Buffer, ref bool __state)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				if (__state)
 				{
@@ -61,7 +61,7 @@ namespace Spark3MasteryMode
 		public static bool Charged = false;
 		private static void Prefix(Action10Control_Blast __instance, ref bool ___Buffer, ref bool ___Initial)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				if (__instance.Charge > __instance.ChargedThreshold)
 				{
@@ -91,15 +91,10 @@ namespace Spark3MasteryMode
 		{
 			CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("FloatIHB").Find("FloatMultiSpike").Find("Hitbox").GetComponent<HitBoxInfo>().SmallAttack = small;
 		}
-		public static void KeepFloatMultiSpikeGoing()
-		{
-			var IHB = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("FloatIHB").Find("FloatMultiSpike").Find("Hitbox").GetComponent<IntegradedHitBoxControl>();
-			typeof(IntegradedHitBoxControl).GetField("counter", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(IHB, 0.0f);
-		}
 		public static bool movedFwd = false;
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				if (CharacterAnimatorChange.Character == 2 && GiveFloatChargeShot2.Charged)
 				{
@@ -187,7 +182,7 @@ namespace Spark3MasteryMode
 	{
 		private static void Prefix(int ActionToChange)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				if (ActionToChange == 7)
 					GiveFloatChargeShot3.MakeFloatMultiSpikeSmall(false);
@@ -202,7 +197,7 @@ namespace Spark3MasteryMode
 	{
 		private static void Prefix(Action10Control_Blast __instance, ref float ___Counter)
 		{
-			if (MasteryMod.DifficultyIsMastery())
+			if (FloatChargeShotMod.DifficultyIsNotMastery())
 			{
 				Transform accessories = CharacterAnimatorChange.StaticReference.Skins[2].transform.Find("Float_Acessories");
 				if (accessories != null)

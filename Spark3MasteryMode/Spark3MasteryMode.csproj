@@ -7,8 +7,8 @@
     <ProjectGuid>{0313FBAC-DC30-4544-A5C7-2D2CAA4CF3BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Spark3MasteryMode</RootNamespace>
-    <AssemblyName>Spark3MasteryMode</AssemblyName>
+    <RootNamespace>FloatChargeShot</RootNamespace>
+    <AssemblyName>FloatChargeShot</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -90,39 +90,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashParryExtraInvuln.cs" />
-    <Compile Include="DisableEJElectricity.cs" />
-    <Compile Include="DisableForcedCharacter.cs" />
-    <Compile Include="FixComboMeterReset.cs" />
-    <Compile Include="FixDashBlinkDrift.cs" />
-    <Compile Include="FixDashOOB.cs" />
-    <Compile Include="FixDownDashLoss.cs" />
-    <Compile Include="FixHystoriaBossFightSoftLock.cs" />
-    <Compile Include="FixPulley.cs" />
-    <Compile Include="FixShotPosition.cs" />
     <Compile Include="GiveFloatChargeShot.cs" />
-    <Compile Include="KillCloudShotUsers.cs" />
-    <Compile Include="LessAnnoyingHyperathExplosions.cs" />
-    <Compile Include="MakeChallengeParry.cs" />
-    <Compile Include="MakeDropOrderConsistent.cs" />
-    <Compile Include="MasteryDifficulty.cs" />
-    <Compile Include="MasteryMod.cs" />
-    <Compile Include="MoreAccurateComboMeter.cs" />
-    <Compile Include="NerfMagnetDash.cs" />
-    <Compile Include="NerfStaticMode.cs" />
-    <Compile Include="NewExploreMedalLocations.cs" />
-    <Compile Include="NewShopText.cs" />
-    <Compile Include="PatchEnemyDamage.cs" />
-    <Compile Include="PatchRaidTimeLimit.cs" />
-    <Compile Include="PatchScoreTimeLimit.cs" />
+    <Compile Include="FloatChargeShotmod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LockPauseScreenDifficulty.cs" />
-    <Compile Include="ReduceBlinkCost.cs" />
-    <Compile Include="SetItemPrices.cs" />
-    <Compile Include="SetNewMedalThresholds.cs" />
-    <Compile Include="SfarxInfinitesNerf.cs" />
-    <Compile Include="ShowStageID.cs" />
-    <Compile Include="SplitFinalUtopia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
