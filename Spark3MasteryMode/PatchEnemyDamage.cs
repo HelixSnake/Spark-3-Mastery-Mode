@@ -13,7 +13,7 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                if (Save.CurrentStageIndex == 38)
+                if (Save.CurrentStageIndex == 38 || Save.CurrentStageIndex == 155)
                     h.Damage *= 0.5f;
                 else
                     h.Damage *= 0.35f;
@@ -23,7 +23,7 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
-                if (Save.CurrentStageIndex == 38)
+                if (Save.CurrentStageIndex == 38 || Save.CurrentStageIndex == 155)
                     h.Damage /= 0.5f;
                 else
                     h.Damage /= 0.35f;
@@ -50,6 +50,7 @@ namespace Spark3MasteryMode
         {
             if (MasteryMod.DifficultyIsMastery())
             {
+                if (Save.CurrentStageIndex == 155) return; // don't do anything in endless dive
                 __instance.ArmourDamageOnParry *= 0.35f;
                 __instance.LeaderAttackInterval *= 0.5f;
                 __instance.BackgroundAttackInterval *= 0.5f;
