@@ -7,9 +7,15 @@ Helix Bug Fix Mod 1.0.0
 + Fixed spark and sfarx's shots sometimes colliding with the ground when shooting upwards
 + Fixed Fark and Reaper Jester "drifting" when using blink when not holding down the analog stick
 
-Helix Bug Fix Mod 1.1.0 [pending]
+Helix Bug Fix Mod 1.1.0
 
 + Combo meter multiplier has more accurate numbers
 + Best score and time now show regardless of whether there are medals
 + Utopia Shelter now unlocks new stages (the contained stage and 3 boss fights) upon completion
 + Softlock in Throwback boss fight from Double -> RYNO defeat order is fixed
+
+
+Helix Bug Fix Mod 1.2.0
+
++ Added fix to down dash sometimes not working
++ Added medal targets to world map pause screen
