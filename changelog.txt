@@ -138,3 +138,5 @@ Release 0.4.1 (pending)
 + Hyperath canon explosions (both kind) can no longer hit you after blocking / iframing them
 + set the maximum small attack juggle limit of enemies to 15
 + made it so sfarx's shots don't stall if aiming at an enemy who can no longer be juggled by shots
++ Gave float a new uncharged shot (try using it to proc scary face!)
++ Reduced the buffs on enemies in deep dive (2x health only)
