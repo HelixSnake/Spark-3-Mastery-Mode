@@ -144,7 +144,7 @@ namespace Spark3MasteryMode
 					}
 					else
 					{
-						if (___Counter > Time.fixedDeltaTime * 2.1f)
+						if (___Counter > Time.fixedDeltaTime * 3.1f)
 						{
 							if (!movedFwd) {
 								__instance.Anim.SetTrigger("Next_Attack");
@@ -168,8 +168,7 @@ namespace Spark3MasteryMode
 								float juggleLimit = (float)typeof(RadsamuEnemy).GetField("SmallJuggleLimit", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(enemy);
 								if (juggleLimit > 0)
 								{
-									__instance.Player.rigid.velocity = enemy.Rigid.velocity + 
-										new Vector3(0, (enemy.Rigid.transform.position - __instance.Player.rigid.transform.position).y, 0);
+									__instance.Player.rigid.velocity = new Vector3(0, (enemy.Rigid.velocity + enemy.Rigid.transform.position - __instance.Player.rigid.transform.position).y, 0);
 								}
 							}
 						}
