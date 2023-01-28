@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
+using HarmonyLib;
 
-namespace Spark3MasteryMode
+namespace Spark3UnFixChargeTap
 {
-    public class MasteryMod : MelonMod
+    public class UnFixChargeTap : MelonMod
     {
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
         }
-        public static bool DifficultyIsMastery()
-        {
-            return Save.GetCurrentSave().CombatDificulty == 5;
-        }
     }
-}
+} 

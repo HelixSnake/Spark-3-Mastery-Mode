@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
-using Spark3MasteryMode;
+using Spark3UnFixChargeTap;
 
-[assembly: MelonInfo(typeof(MasteryMod), "Mastery Mode", "0.4.1 Beta", "Helix Snake")]
+[assembly: MelonInfo(typeof(UnFixChargeTap), "UnFixChargeTap", "1.0.0", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Spark3MasteryMode")]
+[assembly: AssemblyTitle("UnFixChargeTap")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Spark3MasteryMode")]
+[assembly: AssemblyProduct("UnFixChargeTap")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
