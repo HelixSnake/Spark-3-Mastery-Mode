@@ -93,7 +93,6 @@
     <Compile Include="DashParryExtraInvuln.cs" />
     <Compile Include="DisableEJElectricity.cs" />
     <Compile Include="DisableForcedCharacter.cs" />
-    <Compile Include="FixChargeTapping.cs" />
     <Compile Include="FixComboMeterReset.cs" />
     <Compile Include="FixDashBlinkDrift.cs" />
     <Compile Include="FixDashOOB.cs" />
