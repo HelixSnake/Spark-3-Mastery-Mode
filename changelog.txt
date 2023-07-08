@@ -131,7 +131,7 @@ District 6
 District 9
 District 79
 
-Release 0.4.1 (pending)
+Release 0.4.1
 & Reduced the amount of delay a dash adds to your ability to block
 + Gave Reaper Jester extra invuln on his parry, so it is safer to follow up after the second swing
 + Dashing now has a tiny amount of invuln regardless of character, to make characters other than fark and reaper jester viable on the later spark 2 stages
