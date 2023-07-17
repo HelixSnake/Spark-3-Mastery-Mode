@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
-using Spark3ScoreLockMod;
+using Spark3ResetExploreMedalsMod;
 
-[assembly: MelonInfo(typeof(ScoreLockMod), "Score Lock Mod", "1.0.0", "Helix Snake")]
+[assembly: MelonInfo(typeof(ResetExploreMedalsMod), "Reset Explore Medals Mod", "1.0.0", "Helix Snake")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ScoreLockMod")]
+[assembly: AssemblyTitle("ResetExploreMedalsMod")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ScoreLockMod")]
+[assembly: AssemblyProduct("ResetExploreMedalsMod")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

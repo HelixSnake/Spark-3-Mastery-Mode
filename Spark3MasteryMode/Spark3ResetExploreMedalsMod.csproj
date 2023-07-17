@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Spark3MasteryMode</RootNamespace>
-    <AssemblyName>Spark3ScoreLockMod</AssemblyName>
+    <AssemblyName>Spark3ResetExploreMedalsMod</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -90,8 +90,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ScoreLockMod.cs" />
-    <Compile Include="PatchScoreTimeLimit.cs" />
+    <Compile Include="ResetExploreMedalsMod.cs" />
+    <Compile Include="ResetExploreMedals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

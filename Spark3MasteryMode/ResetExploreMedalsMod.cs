@@ -5,17 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using MelonLoader;
 
-namespace Spark3ScoreLockMod
+namespace Spark3ResetExploreMedalsMod
 {
-    public class ScoreLockMod : MelonMod
+    public class ResetExploreMedalsMod : MelonMod
     {
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
-        }
-        public static bool DifficultyIsMastery()
-        {
-            return Save.GetCurrentSave().CombatDificulty == 5;
         }
     }
 }
