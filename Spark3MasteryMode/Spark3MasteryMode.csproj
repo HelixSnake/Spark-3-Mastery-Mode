@@ -99,6 +99,7 @@
     <Compile Include="FixDownDashLoss.cs" />
     <Compile Include="FixHystoriaBossFightSoftLock.cs" />
     <Compile Include="FixPulley.cs" />
+    <Compile Include="FixRoadwayRallyWallExploit.cs" />
     <Compile Include="FixShotPosition.cs" />
     <Compile Include="GiveFloatChargeShot.cs" />
     <Compile Include="KillCloudShotUsers.cs" />

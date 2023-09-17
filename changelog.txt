@@ -140,3 +140,6 @@ Release 0.4.1
 + made it so sfarx's shots don't stall if aiming at an enemy who can no longer be juggled by shots
 + Gave float a new uncharged shot (try using it to proc scary face!)
 + Reduced the buffs on enemies in deep dive (2x health only)
+
+Release 0.5.0
++ Fixed wallrunning exploit on Roadway Rally
