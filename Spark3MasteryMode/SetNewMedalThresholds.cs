@@ -325,6 +325,30 @@ namespace Spark3MasteryMode
                 Save.SpeedDiaTargets[17] = 70f;
                 Save.ScoreGoldTargets[17] = 200000f;
                 Save.ScoreDiaTargets[17] = 360000f;
+
+                // downtown dissent
+                //Save.SpeedGoldTargets[?] = 230f;
+                //Save.SpeedDiaTargets[?] = 200f;
+
+                // residential rattle
+                //Save.SpeedGoldTargets[?] = 33f;
+                //Save.SpeedDiaTargets[?] = 28f;
+
+                // roadway rally
+                //Save.SpeedGoldTargets[?] = 90f;
+                //Save.SpeedDiaTargets[?] = 75f;
+
+                // squabble spillway
+                //Save.SpeedGoldTargets[?] = 48f;
+                //Save.SpeedDiaTargets[?] = 43f;
+
+                // strike sewers
+                //Save.SpeedGoldTargets[?] = 85f;
+                //Save.SpeedDiaTargets[?] = 75f;
+
+                // on the run
+                //Save.SpeedGoldTargets[?] = 90f;
+                //Save.SpeedDiaTargets[?] = 83f;
             }
         }
     }
